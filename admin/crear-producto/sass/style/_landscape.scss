@@ -1,0 +1,128 @@
+.flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+}
+
+.inputs{
+	display: inline-block;
+	width: 50vw;
+	margin-top: 20px;
+}
+
+.text-5-items{
+	font-size: 20px !important;
+}
+
+form{
+	z-index: 10;
+
+}
+
+.inputs{
+	display: flex;
+	justify-content: center;
+	width: 60%;
+}
+
+.inputContainer{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inputDescription{
+	width: auto;
+	white-space: nowrap;
+
+}
+
+
+.inputData{
+	width: 100%;
+	input,textarea{
+		width: 100%;
+		background-color: #333;
+		border: 2px solid rgb(121, 121, 121);
+		color: var(--bodyColor);
+		font-size: 20px;
+		z-index: 10;
+		&:disabled{
+			opacity: .8;
+		}
+		&:invalid{
+			border-color: hsl(0, 61%, 54%);
+		}
+		&:valid{
+			border-color: hsl(135, 61%, 54%);
+		}
+	}
+	textarea{
+		resize: vertical;
+		min-height: 150px;
+		max-height: 300px;
+	}
+}
+
+
+.images-container,.addImageContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.images-grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px 20px;
+}
+
+.image-grid-item{
+	border: 2px solid var(--color1);
+	border-radius: 10px;
+	padding: 10px;
+	height: 200px;
+	width: 200px;
+	img{
+		margin: 0;
+		padding: 0;
+		object-fit: contain;
+		width: 100%;
+	}
+}
+
+
+.addImageContainer{
+	margin-top: 50px;
+}
+
+.imageUploader{
+	input{
+	}
+}
+
+
+.deleteImage{
+	visibility: hidden;
+}
+
+.sendButtonContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+	button{
+		padding: 5px;
+		font-size: 15px;
+		font-weight: 700;
+		margin: 20px;
+	}
+}

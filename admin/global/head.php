@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/common-scripts/alertify.min.css">
+<link rel="stylesheet" href="/common-scripts/default.css">
+<script src="/common-scripts/alertify.min.js" defer></script>
+
+<link rel="stylesheet" href="/admin/global/sass/compiled/compiled.css">
+<script defer src="/admin/global/script/script.js"></script>
+<link rel="shortcut icon" href="/images/logo.webp" type="image/x-icon">

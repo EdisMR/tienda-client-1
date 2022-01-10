@@ -1,0 +1,16 @@
+.tableContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+table{
+	border: 2px solid #ccc;
+}
+
+th, td{
+	padding: 20px;
+	border: 2px solid #ccc;
+}
+

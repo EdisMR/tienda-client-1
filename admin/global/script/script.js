@@ -30,3 +30,5 @@ function switchMenu(){
 		}
 	}
 }
+
+document.querySelector("main").addEventListener("click",closeMenu,false)

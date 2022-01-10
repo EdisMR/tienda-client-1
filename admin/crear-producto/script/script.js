@@ -44,9 +44,10 @@ imageForm.addEventListener("input",subirItem,false)
 /* item es el item que llamo a la funcion */
 function subirItem(evento,elm, item) {
 	evento.preventDefault()
+	let randomImgN=randomImageName()
 
 	let formDataInputs = new FormData(imageForm)
-	formDataInputs.append("newname", randomImageName())
+	formDataInputs.append("newname", randomImgN)
 
 	let nombreCompletoImagenSubida
 	fetch(uploadUrl, {
@@ -58,9 +59,13 @@ function subirItem(evento,elm, item) {
 		})
 		.then(e => {
 			nombreCompletoImagenSubida = e
-			setIMG(nombreCompletoImagenSubida)
-			addImageNameToInput(nombreCompletoImagenSubida)
-			alertify.success("Imagen subida")
+			if(nombreCompletoImagenSubida.includes(randomImgN)){
+				setIMG(nombreCompletoImagenSubida)
+				addImageNameToInput(nombreCompletoImagenSubida)
+				alertify.success("Imagen subida")
+			}else{
+				throw new Error
+			}
 		})
 		.catch(e => {
 			/* console.log(e); */
@@ -94,11 +99,11 @@ function setIMG(stringRoute) {
 
 
 imageButtonDeleteProduct.forEach(elm=>{
-	elm.addEventListener("click",eliminarProducto,false)
+	elm.addEventListener("click",deleteImageFromServer,false)
 })
 
-/* ELIMINAR UN PRODUCTO */
-function eliminarProducto(e,imageName){
+/* ELIMINAR UNA IMAGEN */
+function deleteImageFromServer(e,imageName){
 	let imagenURL
 	e?imagenURL= e.target.dataset.url:imagenURL=imageName
 
@@ -137,7 +142,7 @@ function deleteAllImages(){
 	let buttonsRemoveImage=document.querySelectorAll(`.images-grid-container button`)
 	buttonsRemoveImage.forEach(elm=>{
 		if(elm.dataset.url!="" && elm.dataset.url!=undefined){
-			eliminarProducto(false,elm.dataset.url)
+			deleteImageFromServer(false,elm.dataset.url)
 		}
 	})
 }

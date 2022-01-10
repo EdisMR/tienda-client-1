@@ -81,16 +81,16 @@
 				<div class="images-grid-container">
 					<div class="image-grid-item">
 						<!-- img insertada con JS -->
-						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete">E</span></button>
+						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete"></span></button>
 					</div>
 					<div class="image-grid-item">
-						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete">E</span></button>
+						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete"></span></button>
 					</div>
 					<div class="image-grid-item">
-						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete">E</span></button>
+						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete"></span></button>
 					</div>
 					<div class="image-grid-item">
-						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete">E</span></button>
+						<button class="deleteImage"><span class="ms-Icon root-43" data-icon-name="Delete"></span></button>
 					</div>
 				</div>
 			</div>

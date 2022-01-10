@@ -57,9 +57,9 @@ form{
 		&:disabled{
 			opacity: .8;
 		}
-		&:invalid{
+		/* &:invalid{
 			border-color: hsl(0, 61%, 54%);
-		}
+		} */
 		&:valid{
 			border-color: hsl(135, 61%, 54%);
 		}
@@ -96,6 +96,7 @@ form{
 		padding: 0;
 		object-fit: contain;
 		width: 100%;
+		max-height:100%;
 	}
 }
 
@@ -124,5 +125,29 @@ form{
 		font-size: 15px;
 		font-weight: 700;
 		margin: 20px;
+	}
+}
+
+
+.deleteImage{
+	background-color: hsl(0, 54%, 54%);
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border:0px;
+	border-radius: 50%;
+	background-image: url("/images/delete.svg");
+	background-size: 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition-duration: .2s;
+	transform: scale(1);
+	:hover{
+		background-color: hsl(0, 54%, 60%);
+		transform: scale(1.1);
+	}
+	:active{
+		background-color: hsl(0, 54%, 50%);;
+		transform: scale(.9);
 	}
 }

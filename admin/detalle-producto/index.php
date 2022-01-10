@@ -16,6 +16,8 @@
 					Detalles del Producto
 				</h1>
 			</div>
+
+			
 	</main>
 </body>
 </html>

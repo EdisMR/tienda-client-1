@@ -52,12 +52,12 @@ form {
   color: var(--bodyColor);
   font-size: 20px;
   z-index: 10;
+  /* &:invalid{
+  	border-color: hsl(0, 61%, 54%);
+  } */
 }
 .inputData input:disabled, .inputData textarea:disabled {
   opacity: 0.8;
-}
-.inputData input:invalid, .inputData textarea:invalid {
-  border-color: #d14242;
 }
 .inputData input:valid, .inputData textarea:valid {
   border-color: #42d166;
@@ -93,6 +93,7 @@ form {
   padding: 0;
   object-fit: contain;
   width: 100%;
+  max-height: 100%;
 }
 
 .addImageContainer {
@@ -114,6 +115,29 @@ form {
   font-size: 15px;
   font-weight: 700;
   margin: 20px;
+}
+
+.deleteImage {
+  background-color: #c94a4a;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  border-radius: 50%;
+  background-image: url("/images/delete.svg");
+  background-size: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition-duration: 0.2s;
+  transform: scale(1);
+}
+.deleteImage :hover {
+  background-color: #d06262;
+  transform: scale(1.1);
+}
+.deleteImage :active {
+  background-color: #c43b3b;
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=compiled.css.map */

@@ -16,6 +16,12 @@
 			<span>Productos</span>
 		</a>
 	</div>
+	
+	<div class="block header-item">
+		<a class="header-link" href="/admin/crear-producto/">
+			<span>Nuevo Producto</span>
+		</a>
+	</div>
 
 	<div class="block header-item">
 		<a class="header-link" href="/admin/listar-ventas/">
@@ -23,11 +29,6 @@
 		</a>
 	</div>
 
-	<div class="block header-item">
-		<a class="header-link" href="/admin/crear-producto/">
-			<span>Nuevo Producto</span>
-		</a>
-	</div>
 
 	<div class="block header-item">
 		<a class="header-link" href="/admin/crear-venta/">

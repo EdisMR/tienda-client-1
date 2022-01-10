@@ -1,5 +1,5 @@
 <?php
-require "../conectarbd.php";
+require "conectarbd.php";
 
 $cuantos=25;
 
@@ -12,3 +12,5 @@ while($row=mysqli_fetch_array($result)){
 }
 
 echo json_encode($myArray);
+
+mysqli_close($conn);

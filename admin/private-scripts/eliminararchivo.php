@@ -9,4 +9,5 @@ if(unlink($rutaEliminar)){
 	print "nope";
 }
 
+mysqli_close($conn);
 ?>

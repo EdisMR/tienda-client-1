@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="block header-item">
-		<a class="header-link" href="/admin/listar-productos/">
+		<a class="header-link" href="/admin/lista/?ver=productos">
 			<span>Productos</span>
 		</a>
 	</div>
@@ -24,17 +24,17 @@
 	</div>
 
 	<div class="block header-item">
-		<a class="header-link" href="/admin/listar-ventas/">
+		<a class="header-link" href="/admin/lista/?ver=ventas">
 			<span>Ventas</span>
 		</a>
 	</div>
 
 
-	<div class="block header-item">
-		<a class="header-link" href="/admin/crear-venta/">
+<!-- 	<div class="block header-item">
+		<a class="header-link" href="/admin/venta/">
 			<span>Nueva Venta</span>
 		</a>
-	</div>
+	</div> -->
 
 	<div class="block header-item">
 		<a class="header-link" href="/admin/detalle-negocio/">
@@ -43,13 +43,13 @@
 	</div>
 
 	<div class="block header-item">
-		<a class="header-link" href="/admin/detalle-producto/">
+		<a class="header-link" id="toProduct">
 			<span>Ir a Producto</span>
 		</a>
 	</div>
 
 	<div class="block header-item">
-		<a class="header-link" href="/admin/detalle-venta/">
+		<a class="header-link" id="toSell">
 			<span>Ir a Venta</span>
 		</a>
 	</div>

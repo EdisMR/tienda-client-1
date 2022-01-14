@@ -1,32 +1,6 @@
-/* PHP queries */
-const getItemsURL="/common-scripts/info-n-products.php/?"
-const urlHrefBase="/admin/producto/?productid="
-var actualPage=1
+const scriptGet="/common-scripts/info-n-products.php/?"
+const urlBaseEnlaceDetalle="/admin/producto/?productid="
 
-/* Table Info */
-const tableBody=document.querySelector("tbody")
-let fetchResult=JSON.parse("{}")
-
-function getItems(){
-	params=new URLSearchParams({
-		"page":actualPage
-	})
-
-	fetch(getItemsURL+params,{
-		method:"GET"
-	})
-	.then(res=>res.text())
-	.then(res=>JSON.parse(res))
-	.then(res=>{
-		fetchResult=res
-		insertRows()
-		document.querySelector("h1 span").innerText=actualPage
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		})
-	})
-}
 
 function insertRows(){
 	let fragment=new DocumentFragment()
@@ -41,7 +15,7 @@ function insertRows(){
 		
 		tLi=document.createElement("td")
 		thref=document.createElement("a")
-		thref.href=`${urlHrefBase}${fetchResult[x].idaleatorio}`
+		thref.href=`${urlBaseEnlaceDetalle}${fetchResult[x].idaleatorio}`
 		thref.textContent=fetchResult[x].idaleatorio
 		tLi.appendChild(thref)
 		tRow.appendChild(tLi)
@@ -76,7 +50,3 @@ function insertRows(){
 
 	tableBody.appendChild(fragment)
 }
-
-
-actualPage=1
-getItems()

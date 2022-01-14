@@ -15,6 +15,15 @@ const createProductScript="/admin/private-scripts/new-product.php"
 const editProductScript="/admin/private-scripts/edit-product.php"
 const infoOneProduct="/common-scripts/info-one-product.php/?"
 
+/* Animacion cuando carga los datos del fetch */
+const animation1=gsap.timeline({
+	paused:true,
+})
+.from(".flex-center",{
+	opacity:0,
+	duration:1
+})
+
 /* Images for the Input */
 var imagesValue="";
 

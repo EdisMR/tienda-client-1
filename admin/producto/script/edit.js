@@ -1,5 +1,5 @@
 const titlePage=document.querySelector(".main-title h1")
-const titleContent="Editar Producto"
+const titleContent="Detalle de Producto"
 titlePage.innerHTML=titleContent
 document.title=titleContent
 
@@ -23,6 +23,7 @@ function getProductDetails(){
 		resultFetchProductDetails=e;
 		fillValues()
 		traerImagenes()
+		animation1.play()
 	})
 }
 

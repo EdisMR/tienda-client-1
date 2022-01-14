@@ -5,7 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Detalle de producto</title>
+	<title>Detalle de Venta</title>
+	<script src="./script/main.js" defer></script>
 	<?php htmlHead(); ?>
 </head>
 <body>
@@ -13,11 +14,9 @@
 	<main>
 	<div class="main-title">
 				<h1>
-					Detalles del Producto
+					Detalle de Venta
 				</h1>
 			</div>
-
-			
 	</main>
 </body>
 </html>

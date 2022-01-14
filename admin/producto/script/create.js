@@ -54,4 +54,6 @@ function fillRandomIDInput(){
 	/* Llenar ID con valor random */
 	mainForm.prodid.value = randomProductID()
 }
+
 fillRandomIDInput()
+animation1.play()

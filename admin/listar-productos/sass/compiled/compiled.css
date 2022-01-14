@@ -10,8 +10,40 @@ table {
 }
 
 th, td {
-  padding: 20px;
-  border: 2px solid #ccc;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 2px solid rgba(204, 204, 204, 0.37);
+  border-bottom: 2px solid rgba(204, 204, 204, 0.219);
+}
+
+table a {
+  color: #17bbe4 !important;
+  display: inline-block;
+  transition-duration: var(--globalTransition);
+}
+table a:active {
+  transform: scale(0.9);
+  background-color: #202020;
+}
+
+table tr {
+  transition-duration: var(--globalTransition);
+  transform: scale(1);
+}
+table tr:nth-child(odd) {
+  background-color: #424242;
+}
+table tr:hover {
+  background-color: #43606b;
+}
+
+@media (max-width: 700px) {
+  .tableContainer {
+    overflow: scroll;
+    box-sizing: border-box;
+  }
 }
 
 /*# sourceMappingURL=compiled.css.map */

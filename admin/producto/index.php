@@ -6,10 +6,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Crear producto</title>
+	<title></title>
 	<?php htmlHead(); ?>
 	<link rel="stylesheet" href="./sass/compiled/compiled.css">
-	<script defer src="./script/script.js"></script>
+	<script defer src="./script/main.js"></script>
+	<?php
+	$editProduct;
+	if(isset($_GET["productid"])){
+		$editProduct=$_GET["productid"];
+		?>
+		<script src="./script/edit.js" defer></script>
+		<?php
+	}else{
+		?>
+		<script src="./script/create.js" defer></script>
+		<?php
+	}
+	?>
 </head>
 
 <body>
@@ -17,7 +30,6 @@
 	<main>
 		<div class="main-title">
 			<h1>
-				Crear un Producto
 			</h1>
 		</div>
 
@@ -64,7 +76,7 @@
 					<div class="inputContainer">
 						<div class="inputDescription">¿Disponible?:&nbsp;&nbsp;</div>
 						<div class="inputData">
-							<input  required type="checkbox" name="disponible" checked>
+							<input  type="checkbox" name="disponible" checked>
 						</div>
 					</div>
 					<div class="inputContainer">
@@ -103,8 +115,8 @@
 
 		<section class="block">
 			<div class="sendButtonContainer">
-				<button id="sendData" class="sendbutton">Enviar Datos</button>
 				<button id="resetMainForm">Resetear formulario</button>
+				<button id="sendData" class="sendbutton">Enviar Datos</button>
 			</div>
 		</section>
 	</main>

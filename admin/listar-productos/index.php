@@ -17,7 +17,7 @@
 	<main>
 		<div class="main-title">
 			<h1>
-				Lista de Productos
+				Lista de Productos. Página <span></span>
 			</h1>
 		</div>
 		<section class="tableContainer">

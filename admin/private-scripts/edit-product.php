@@ -18,10 +18,10 @@ if($disp){
 	$disponible=0;
 }
 
-$sqlQueryNewProduct="INSERT INTO `$tablaProductos` (`idaleatorio`, `titulo`, `descripcion`, `valor`, `cantidad`, `categoria`, `imagenes`, `disponible`) VALUES ('$prodid', '$titulo', '$descripcion', '$valor', '$cantidad', '$categoria', '$imagenes', '$disponible')";
+$sqlQueryEditProduct="UPDATE `$tablaProductos` SET `titulo` = '$titulo', `descripcion` = '$descripcion', `valor` = '$valor', `cantidad` = '$cantidad', `categoria` = '$categoria', `imagenes` = '$imagenes', `disponible` = '$disponible' WHERE `$tablaProductos`.`idaleatorio`='$prodid' ";
 
-if (mysqli_query($conn, $sqlQueryNewProduct)) {
-	echo "New record created successfully";
+if (mysqli_query($conn, $sqlQueryEditProduct)) {
+	echo "Succesfully modified";
 } else {
 	echo "Error: ". mysqli_error($conn);
 }

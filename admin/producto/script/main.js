@@ -9,21 +9,15 @@ const itemsGridImages=document.querySelectorAll(".image-grid-item")
 const imageButtonDeleteProduct=document.querySelectorAll(".deleteImage")
 
 /* PHP scripts */
-const uploadUrl = "/admin/private-scripts/subirarchivo.php"
-const deleteUrl = "/admin/private-scripts/eliminararchivo.php"
-const createProductScript="/admin/private-scripts/createproduct.php"
+const uploadUrl = "/admin/private-scripts/upload-file.php"
+const deleteUrl = "/admin/private-scripts/delete-file.php"
+const createProductScript="/admin/private-scripts/new-product.php"
+const editProductScript="/admin/private-scripts/edit-product.php"
+const infoOneProduct="/common-scripts/info-one-product.php/?"
 
 /* Images for the Input */
 var imagesValue="";
 
-function restartInitialStatus(){
-
-}
-
-function randomProductID() {
-	let tempData = new Date()
-	return (tempData.valueOf()).toString(36)
-}
 
 function randomImageName() {
 	return crypto.randomUUID();
@@ -41,13 +35,14 @@ function removeImageNameInInput(value){
 
 imageForm.addEventListener("input",subirItem,false)
 
-/* item es el item que llamo a la funcion */
-function subirItem(evento,elm, item) {
+/* item es el item que llamo a la funcion - esta funcion envia
+ la imagen al servidor y devuelve el nombre con el que fue guardado */
+ function subirItem(evento,elm, item) {
 	evento.preventDefault()
-	let randomImgN=randomImageName()
+	let randomImgName=randomImageName()
 
 	let formDataInputs = new FormData(imageForm)
-	formDataInputs.append("newname", randomImgN)
+	formDataInputs.append("newname", randomImgName)
 
 	let nombreCompletoImagenSubida
 	fetch(uploadUrl, {
@@ -59,7 +54,7 @@ function subirItem(evento,elm, item) {
 		})
 		.then(e => {
 			nombreCompletoImagenSubida = e
-			if(nombreCompletoImagenSubida.includes(randomImgN)){
+			if(nombreCompletoImagenSubida.includes(randomImgName)){
 				setIMG(nombreCompletoImagenSubida)
 				addImageNameToInput(nombreCompletoImagenSubida)
 				alertify.success("Imagen subida")
@@ -68,14 +63,13 @@ function subirItem(evento,elm, item) {
 			}
 		})
 		.catch(e => {
-			/* console.log(e); */
 			alertify.error("No se cargó la imagen")
 		})
 }
 
 function setIMG(stringRoute) {
 	let ultimoElemento=""
-	/* Definir quien es el elemento a llenar con la imagen para insertarle la imagen */
+	/* Definir quien es el elemento a llenar con la imagen, para insertarle la imagen */
 	for(let x=0;x<itemsGridImages.length;x++){
 		if(itemsGridImages[x].children.length<2){
 			ultimoElemento=itemsGridImages[x]
@@ -95,14 +89,12 @@ function setIMG(stringRoute) {
 }
 
 
-
-
-
+/* Añadir llistener para eliminar la imagen del servidor */
 imageButtonDeleteProduct.forEach(elm=>{
 	elm.addEventListener("click",deleteImageFromServer,false)
 })
 
-/* ELIMINAR UNA IMAGEN */
+/* ELIMINAR UNA IMAGEN DEL SERVIDOR */
 function deleteImageFromServer(e,imageName){
 	let imagenURL
 	e?imagenURL= e.target.dataset.url:imagenURL=imageName
@@ -118,17 +110,16 @@ function deleteImageFromServer(e,imageName){
 			return ec.text()
 		})
 		.then(ec=> {
-			/* console.log(ec); */
 			removeIMG(imagenURL)
 			removeImageNameInInput(imagenURL)
 			alertify.success("Imagen borrada")
 		})
 		.catch(ec => {
-			/* console.log(ec); */
 			alertify.warning("No se ha borrado la imagen")
 		})
 }
 
+/* Eliminar una sola imagen y ocultar el boton para eliminarla*/
 function removeIMG(imageDataURL){
 	let imageNode=document.querySelector(`img[src *= "${imageDataURL}"]`)
 	let parentElement=imageNode.parentNode
@@ -138,6 +129,8 @@ function removeIMG(imageDataURL){
 	parentElement.querySelector("button").style.visibility="hidden"
 }
 
+/* Eliminar todas las imagenes del formulario 
+(para cuando se resetea el formulario) */
 function deleteAllImages(){
 	let buttonsRemoveImage=document.querySelectorAll(`.images-grid-container button`)
 	buttonsRemoveImage.forEach(elm=>{
@@ -146,7 +139,7 @@ function deleteAllImages(){
 		}
 	})
 }
-
+/* Eliminar las imagenes del dom cuando se resetea el formulario */
 function removeImages(){
 	let images=document.querySelectorAll(`.images-grid-container button`)
 	images.forEach(elm=>{
@@ -156,7 +149,7 @@ function removeImages(){
 	})
 }
 
-
+/* Listener para enviar el formulario */
 buttonSendData.addEventListener("click",sendData,false)
 
 function sendData(e){
@@ -178,50 +171,8 @@ function sendData(e){
 	}
 }
 
-buttonResetData.addEventListener("click",()=>{
-	mainForm.reset();imageForm.reset()
-	deleteAllImages();
-	alertify.message("Formulario reseteado")
-	imagesValue=""
-	mainForm.imagenes.value=imagesValue
-	fillRandomIDInput()
-})
 
-function sendMainForm(){
-	habilitarInputs()
-	let mainFormData=new FormData(mainForm)
-
-	fetch(createProductScript,{
-		method:"POST",
-		body:mainFormData
-	})
-	.then(r=>{
-		return r.text()
-	})
-	.then(r=>{
-		/* console.log(r,"enviado"); */
-		window.scrollTo(0,0)
-		mainForm.reset()
-		imageForm.reset()
-		removeImages()
-		fillRandomIDInput()
-		mainForm.prodid.disabled=true
-		mainForm.imagenes.disabled=true
-		alertify.success("Los datos se han enviado")
-	})
-	.catch(err=>{
-		/* console.log(err); */
-		deshabilitarInputs()
-		alertify.error("No se han enviado los datos")
-	})
-}
-
-function fillRandomIDInput(){
-	/* Llenar ID con valor random */
-	mainForm.prodid.value = randomProductID()
-}
-fillRandomIDInput()
-
+/* funciones para habilitar o deshabilitar inputs al verificar si están todos los inputs correctos */
 function habilitarInputs(){
 	let elementos=[
 		mainForm.prodid,
@@ -240,4 +191,9 @@ function deshabilitarInputs(){
 	elementos.forEach(elm=>{
 		elm.disabled=true
 	})
+}
+
+
+function restartInitialStatus(){
+	
 }

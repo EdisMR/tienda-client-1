@@ -1,26 +1,26 @@
 /* PHP queries */
-const getItemsURL="/common-scripts/ver-n-prod.php"
+const getItemsURL="/common-scripts/info-n-products.php/?"
 
 /* Table Info */
 const tableBody=document.querySelector("tbody")
 let fetchResult=JSON.parse("{}")
 
-function getItems(howMany){
-	fetch(getItemsURL,{
-		method:"POST"
+function getItems(page){
+	params=new URLSearchParams({
+		"page":page
+	})
+
+	fetch(getItemsURL+params,{
+		method:"GET"
 	})
 	.then(res=>res.text())
 	.then(res=>JSON.parse(res))
 	.then(res=>{
 		fetchResult=res
+		console.log(res);
 	})
 }
 
 function insertRows(){
 	let fragment=document.createDocumentFragment()
-
-	for(let x in fetchResult){
-		let elmTD=document.createElement("td")
-		let elmTD=
-	}
 }

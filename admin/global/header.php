@@ -18,7 +18,7 @@
 	</div>
 	
 	<div class="block header-item">
-		<a class="header-link" href="/admin/crear-producto/">
+		<a class="header-link" href="/admin/producto/">
 			<span>Nuevo Producto</span>
 		</a>
 	</div>

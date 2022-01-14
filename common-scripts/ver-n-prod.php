@@ -1,14 +1,21 @@
 <?php
 require "conectarbd.php";
 
-$cuantos=25;
+$cuantos = 25;
 
-$query="select * from $tablaProductos";
+/* Numero que indica la pagina de resultados que se esta viendo */
+/* http://localhost/common-scripts/ver-n-prod.php/?actual=0 */
+$MostradoActual = $_GET["page"];
 
-$result=mysqli_query($conn,$query);
+$inicioQuery = $cuantos * (intval($MostradoActual)-1);
 
-while($row=mysqli_fetch_array($result)){
-	$myArray[]=$row;
+$query = "select * from $tablaProductos LIMIT $cuantos OFFSET $inicioQuery";
+
+$result = mysqli_query($conn, $query);
+
+$myArray=array();
+while($row = mysqli_fetch_assoc($result)) {
+	$myArray[] = $row;
 }
 
 echo json_encode($myArray);

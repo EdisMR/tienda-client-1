@@ -1,6 +1,7 @@
 /* PHP queries */
 const contenedorDeTabla=document.querySelector(".tableContainer")
 var actualPage=1
+sqlResults=0
 
 /* Animacion cuando carga los datos del fetch */
 let animation1=gsap.timeline({
@@ -40,3 +41,25 @@ function getItems(){
 
 actualPage=1
 getItems()
+
+
+function pageButtonsMore(){
+	if(sqlResults>=24){
+		actualPage++
+		getItems()
+	}else{
+	}
+}
+
+function pageButtonsLast(){
+	if(actualPage>1){
+		actualPage--
+		getItems()
+	}
+}
+
+const btnLast=document.querySelector("#lastResultsBTN")
+const btnMore=document.querySelector("#moreResultsBTN")
+
+btnLast.addEventListener("click",pageButtonsLast,false)
+btnMore.addEventListener("click",pageButtonsMore,false)

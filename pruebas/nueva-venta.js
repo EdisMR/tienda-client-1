@@ -10,7 +10,7 @@ algo.append("telefono","+50623454567")
 algo.append("total","250000")
 algo.append("entregado",1)/* el true tiene que ser numero */
 algo.append("notas","Esta es una nota aleatoria")
-algo.append("productos",JSON.parse('{"s1":"uno"}'))/* Enviar el json verificado */
+algo.append("productos","este es un string de los productos que se compraron")
 
 fetch("http://tienda.localhost/common-scripts/new-sale.php",{
 	method:"POST",

@@ -1,19 +1,22 @@
 <?php
 require "../../common-scripts/conectarbd.php";
 
-/* Solicitar productid por get */
-$ventaRequest=$_GET["ventaid"];
+$nombre=$_POST["nombre"];
+$telefono=$_POST["telefono"];
+$total=intval($_POST["total"]);
+$entregado=((bool) $_POST["entregado"]);
+$notas=$_POST["notas"];
+$productos=$_POST["productos"];
+$idaleatorio=$_POST["idaleatorio"];
 
-$query = "SELECT * FROM `$tablaVentas` WHERE `idauto`='$ventaRequest'";
+$query = "UPDATE `$tablaVentas` SET `nombre` = '$nombre', `telefono` = '$telefono', `total` = '$total', `entregado` = '$entregado', `notas` = '$notas', `productos` = '$productos', `idaleatorio` = '$idaleatorio' WHERE `$tablaVentas`.`idaleatorio` = '$idaleatorio'";
 
-$result = mysqli_query($conn, $query);
-
-$myArray=array();
-while($row = mysqli_fetch_assoc($result)) {
-	$myArray[] = $row;
+if($conn -> query( $query ) === TRUE){
+	echo "1";
+}else{
+	echo "0";
 }
 
-echo json_encode($myArray);
-
 mysqli_close($conn);
+
 ?>

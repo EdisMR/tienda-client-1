@@ -53,6 +53,9 @@ function insertRows(){
 		fragment.appendChild(tRow)
 	}
 
-
+	tableBody.innerHTML=""
 	tableBody.appendChild(fragment)
+	sqlResults=Array.from(document.querySelectorAll("tbody tr")).length
+
+	animation1.restart()
 }

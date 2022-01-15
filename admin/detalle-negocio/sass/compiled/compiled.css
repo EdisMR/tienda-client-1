@@ -1,3 +1,61 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
+form {
+  display: inline-block;
+  max-width: 60vw;
+}
+
+.inputContainer {
+  max-width: 60vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.inputContainer input {
+  display: inline-block;
+  width: 100%;
+  margin-left: 20px;
+  border: 2px solid rgba(204, 204, 204, 0.5);
+}
+.inputContainer textarea {
+  resize: vertical;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
+}
+.inputContainer textarea, .inputContainer input {
+  background-color: #333;
+  color: var(--bodyColor);
+  font-size: 20px;
+  z-index: 10;
+}
+.inputContainer textarea:disabled, .inputContainer input:disabled {
+  opacity: 0.8;
+}
+.inputContainer textarea:valid, .inputContainer input:valid {
+  border-color: #42d166;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sendData {
+  margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+  form {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=compiled.css.map */

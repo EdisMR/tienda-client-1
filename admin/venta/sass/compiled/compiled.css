@@ -1,3 +1,49 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  width: 100%;
+}
 
+.inputContainer {
+  max-width: 60vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 10px;
+}
+.inputContainer input {
+  display: inline-block;
+  width: 100%;
+  margin-left: 20px;
+}
+.inputContainer textarea {
+  resize: vertical;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
+}
+.inputContainer textarea, .inputContainer input {
+  background-color: #333;
+  color: var(--bodyColor);
+  font-size: 20px;
+  z-index: 10;
+}
+.inputContainer textarea:disabled, .inputContainer input:disabled {
+  opacity: 0.8;
+  border: 2px solid #797979;
+}
+.inputContainer textarea:valid, .inputContainer input:valid {
+  border-color: #42d166;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 
 /*# sourceMappingURL=compiled.css.map */

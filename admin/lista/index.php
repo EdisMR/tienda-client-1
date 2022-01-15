@@ -91,6 +91,11 @@ if($ver=="ventas"){
 		}
 		?>
 
+<div class="moreResultsButton">
+	<button id="lastResultsBTN">Anteriores</button>
+	<button id="moreResultsBTN">Siguientes</button>
+</div>
+
 	</main>
 </body>
 

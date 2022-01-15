@@ -115,7 +115,12 @@
 
 		<section class="block">
 			<div class="sendButtonContainer">
-				<button id="resetMainForm">Resetear formulario</button>
+				<button id="resetMainForm" <?php if(isset($_GET["productid"])){
+					?>
+					style="display:none;"
+					<?php
+				}?>
+				>Resetear formulario</button>
 				<button id="sendData" class="sendbutton">Enviar Datos</button>
 			</div>
 		</section>

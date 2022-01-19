@@ -1,5 +1,5 @@
 /* PHP queries */
-const contenedorDeTabla=document.querySelector(".tableContainer")
+const contenedorDeTabla=document.querySelector(".tableContainer tbody")
 var actualPage=1
 sqlResults=0
 

@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Detalle del negocio</title>
 	<link rel="stylesheet" href="./sass/compiled/compiled.css">
-	<script src="/admin/detalle-negocio/script/main.js"></script>
+	<script src="/admin/detalle-negocio/script/main.js" defer></script>
 	<?php htmlHead(); ?>
 </head>
 <body>
@@ -27,14 +27,8 @@
 						<span>Nombre del negocio: </span><input required type="text" name="nombrenegocio">
 					</div>
 					<div class="inputContainer">
-						<span>Telefono de WhatsApp: </span><input required type="text" name="telefonowspp">
+						<span>Telefonos de WhatsApp: </span><input required type="text" name="telefonowspp">
 					</div>
-					<!-- <div class="inputContainer">
-						<span>Usuario: </span><input required type="text" name="usuario">
-					</div>
-					<div class="inputContainer">
-						<span>Contraseña: </span><input required type="text" name="contrasenia">
-					</div> -->
 				</div>
 			</form>
 			</div>

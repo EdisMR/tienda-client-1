@@ -39,7 +39,12 @@ toSellBtn = document.querySelector("#toSell")
 toProductBtn.addEventListener("click", () => {
 	alertify.prompt("Ingrese el ID del producto", "",
 		function (evt, value) {
-			window.location.href=`${location.origin}/admin/producto/?productid=${value}`
+			if(value!=""){
+				window.location.href=`${location.origin}/admin/producto/?productid=${value}`
+			}
+			if(value==""){
+				alertify.warning("Ingresa un valor válido")
+			}
 		},
 		function () {
 		});
@@ -48,7 +53,12 @@ toProductBtn.addEventListener("click", () => {
 toSellBtn.addEventListener("click", () => {
 	alertify.prompt("Ingrese el ID de la venta", "",
 		function (evt, value) {
-			window.location.href=`${location.origin}/admin/venta/?ventaid=${value}`
+			if(value!=""){
+				window.location.href=`${location.origin}/admin/venta/?ventaid=${value}`
+			}
+			if(value==""){
+				alertify.warning("Ingresa un valor válido")
+			}
 		},
 		function () {
 		});

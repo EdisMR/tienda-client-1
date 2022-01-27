@@ -1,5 +1,5 @@
 /* PHP queries */
-const contenedorDeTabla=document.querySelector(".tableContainer tbody")
+const contenedorDeTabla="tbody"
 var actualPage=1
 sqlResults=0
 
@@ -9,7 +9,7 @@ let animation1=gsap.timeline({
 })
 .from(contenedorDeTabla,{
 	opacity:0,
-	duration:1
+	duration:1.5,
 })
 
 

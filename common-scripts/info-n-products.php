@@ -9,7 +9,7 @@ $MostradoActual = $_GET["page"];
 
 $inicioQuery = $cuantos * (intval($MostradoActual)-1);
 
-$query = "select * from $tablaProductos LIMIT $cuantos OFFSET $inicioQuery";
+$query = "select * from $tablaProductos ORDER BY idauto LIMIT $cuantos OFFSET $inicioQuery";
 
 $result = mysqli_query($conn, $query);
 

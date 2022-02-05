@@ -1,1 +1,1 @@
-document.querySelector("#switchMenu").click()
+/* document.querySelector("#switchMenu").click() */

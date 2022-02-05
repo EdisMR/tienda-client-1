@@ -16,6 +16,8 @@
 					Panel de Administración
 				</h1>
 			</div>
+
+			
 		</main>
 	</body>
 </html>

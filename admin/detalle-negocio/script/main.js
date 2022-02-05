@@ -29,5 +29,8 @@ function sendData(e){
 	.then(e=>e.text())
 	.then(e=>{
 		console.log(e);
+		alertify.success("Datos enviados correctamente")
+	}).catch(e=>{
+		alertify.error("Ocurrió un error")
 	})
 }

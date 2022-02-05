@@ -109,7 +109,7 @@
 
 		<div class="addImageContainer">
 			<form autocomplete="off" id="imageUploader">
-				<input type="file" name="imagen" accept="image/png, image/jpeg, image/webp, image/jpg">
+				<input type="file" name="imagen" accept="image/png, image/jpeg, image/webp, image/jpg" multiple>
 			</form>
 		</div>
 

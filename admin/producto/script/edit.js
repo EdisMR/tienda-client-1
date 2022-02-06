@@ -25,6 +25,9 @@ function getProductDetails(){
 		traerImagenes()
 		animation1.play()
 	})
+	.catch(e=>{
+		alertify.error("Error al traer los datos")
+	})
 }
 
 buttonResetData.addEventListener("click",()=>{

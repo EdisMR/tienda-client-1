@@ -11,6 +11,9 @@ function getInfo(){
 		formulario.nombrenegocio.value=infoNegocio[0].nombrenegocio
 		formulario.telefonowspp.value=infoNegocio[0].telefonowspp
 	})
+	.catch(e=>{
+		alertify.warning("Error al traer los datos")
+	})
 }
 getInfo()
 
@@ -31,6 +34,6 @@ function sendData(e){
 		console.log(e);
 		alertify.success("Datos enviados correctamente")
 	}).catch(e=>{
-		alertify.error("Ocurrió un error")
+		alertify.error("No se realizó el cambio")
 	})
 }

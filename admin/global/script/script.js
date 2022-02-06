@@ -4,20 +4,44 @@ const header = {
 	visible: false
 }
 
+const headerAnimation=gsap.timeline({paused:true,})
+.from(".header-item",{
+	delay:.1,
+	duration:.2,
+	stagger:.1,
+	y:10,
+	opacity:0,
+	rotationX:50,
+	onStart:()=>{
+		Array.from(document.querySelectorAll(".header-item"))
+		.forEach(elm=>{
+			elm.style.display="block"
+		})
+	},
+	onReverseComplete:()=>{
+		Array.from(document.querySelectorAll(".header-item"))
+		.forEach(elm=>{
+			elm.style.display="none"
+		})
+	}
+})
+
 header.switchMenuButton.addEventListener("click", switchMenu, false)
 
 function showMenu() {
-	header.itemsShow.forEach(elm => {
+	/* header.itemsShow.forEach(elm => {
 		elm.style.display = "block"
-		header.visible = true
-	});
+	}); */
+	header.visible = true
+	headerAnimation.play()
 }
 
 function closeMenu() {
-	header.itemsShow.forEach(elm => {
+	/* header.itemsShow.forEach(elm => {
 		elm.style.display = "none"
-		header.visible = false
-	});
+	}); */
+	header.visible = false
+	headerAnimation.reverse()
 }
 
 
@@ -37,7 +61,7 @@ toProductBtn = document.querySelector("#toProduct")
 toSellBtn = document.querySelector("#toSell")
 
 toProductBtn.addEventListener("click", () => {
-	alertify.prompt("Ingrese el ID del producto", "",
+	alertify.prompt("", "",
 		function (evt, value) {
 			if(value!=""){
 				window.location.href=`${location.origin}/admin/producto/?productid=${value}`
@@ -47,11 +71,11 @@ toProductBtn.addEventListener("click", () => {
 			}
 		},
 		function () {
-		});
+		}).setHeader("Ingrese el ID del producto");
 }, false)
 
 toSellBtn.addEventListener("click", () => {
-	alertify.prompt("Ingrese el ID de la venta", "",
+	alertify.prompt("", "",
 		function (evt, value) {
 			if(value!=""){
 				window.location.href=`${location.origin}/admin/venta/?ventaid=${value}`
@@ -61,5 +85,5 @@ toSellBtn.addEventListener("click", () => {
 			}
 		},
 		function () {
-		});
+		}).setHeader("Ingrese el ID de la venta");
 }, false)

@@ -37,6 +37,9 @@ function getItems(){
 			behavior: 'smooth',
 		})
 	})
+	.catch(e=>{
+		alertify.warning("Error al traer los datos")
+	})
 }
 
 actualPage=1

@@ -22,6 +22,9 @@ function getSellDetails(){
 		innerInputData()
 		deshabilitarInputs()
 	})
+	.catch(e=>{
+		alertify.error("Error al traer los datos")
+	})
 }
 
 

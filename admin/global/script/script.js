@@ -6,12 +6,10 @@ const header = {
 
 const headerAnimation=gsap.timeline({paused:true,})
 .from(".header-item",{
-	delay:.1,
 	duration:.2,
-	stagger:.1,
-	y:10,
+	stagger:.05,
 	opacity:0,
-	rotationX:50,
+	y:20,
 	onStart:()=>{
 		Array.from(document.querySelectorAll(".header-item"))
 		.forEach(elm=>{

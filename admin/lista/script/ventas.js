@@ -37,7 +37,7 @@ function insertRows(){
 		tRow.appendChild(tLi)
 		
 		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].total
+		tLi.textContent=`₡${fetchResult[x].total}`
 		tRow.appendChild(tLi)
 		
 		

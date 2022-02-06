@@ -33,7 +33,9 @@
 			</h1>
 		</div>
 
-
+		<section id="show-error-container">
+		<img src="/images/alert.webp"><span id="show-error"></span>
+	</section>
 		<div class="flex-center">
 			<div class="inputs">
 				<form autocomplete="off" id="mainform">
@@ -109,7 +111,7 @@
 
 		<div class="addImageContainer">
 			<form autocomplete="off" id="imageUploader">
-				<input type="file" name="imagen" accept="image/png, image/jpeg, image/webp, image/jpg" multiple>
+				<input type="file" name="imagen" accept="image/png, image/jpeg, image/webp, image/jpg" multiple max="4">
 			</form>
 		</div>
 

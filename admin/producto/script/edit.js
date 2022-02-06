@@ -83,10 +83,15 @@ function fillValues(){
 
 function traerImagenes(){
 	let ArrayDeLasImagenesBD=Array.from(imagesValue.split(","))
-
+	let counter=0
 	ArrayDeLasImagenesBD.forEach(elm=>{
 		if(elm!=""){
+			counter++
 			setIMG(elm)
 		}
 	})
+	if(counter>4){
+		document.querySelector("#show-error-container").style.visibility="visible"
+		fillErrors.innerText=`Más de 4 imágenes (${counter})`
+	}
 }

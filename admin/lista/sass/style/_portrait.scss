@@ -1,4 +1,5 @@
-.tableContainer{
-	overflow: scroll;
-	box-sizing: border-box;
+.tableContainer {
+	overflow: auto;
+	display: flex;
+	justify-content: flex-start;
 }

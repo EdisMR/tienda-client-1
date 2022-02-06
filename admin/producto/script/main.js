@@ -15,6 +15,8 @@ const createProductScript = "/admin/private-scripts/new-product.php"
 const editProductScript = "/admin/private-scripts/edit-product.php"
 const infoOneProduct = "/common-scripts/info-one-product.php/?"
 
+const fillErrors=document.getElementById("show-error")
+
 /* Animacion cuando carga los datos del fetch */
 const animation1 = gsap.timeline({
 		paused: true,

@@ -13,7 +13,7 @@
 		<main>
 			<div class="main-title">
 				<h1>
-					Panel de Administración
+					Inicio
 				</h1>
 			</div>
 

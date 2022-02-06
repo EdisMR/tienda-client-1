@@ -52,8 +52,9 @@ table tr:hover {
 
 @media (max-width: 700px) {
   .tableContainer {
-    overflow: scroll;
-    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 

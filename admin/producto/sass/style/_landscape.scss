@@ -159,3 +159,15 @@ form{
 		transform: scale(.9);
 	}
 }
+
+
+
+#show-error-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	img{
+		width: 30px;
+	}
+}

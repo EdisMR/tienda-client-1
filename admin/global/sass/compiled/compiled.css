@@ -107,4 +107,10 @@ header {
   background-color: var(--color1Active);
 }
 
+@media (max-width: 700px) {
+  .main-title {
+    margin-left: 90px;
+  }
+}
+
 /*# sourceMappingURL=compiled.css.map */

@@ -29,6 +29,8 @@ if($ver=="ventas"){
 		if ($ver == "ventas") {
 		?>
 			<script src="./script/ventas.js" defer></script>
+			<script src="/common-scripts/moment-with-locales.js"></script>
+
 	<?php
 		}
 	}

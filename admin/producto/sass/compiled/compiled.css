@@ -149,4 +149,20 @@ form {
   transform: scale(0.9);
 }
 
+#show-error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+#show-error-container img {
+  width: 30px;
+}
+
+@media (max-width: 700px) {
+  .images-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*# sourceMappingURL=compiled.css.map */

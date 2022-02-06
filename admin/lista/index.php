@@ -56,10 +56,9 @@ if($ver=="ventas"){
 						<th>N°</th>
 						<th>Id</th>
 						<th>Titulo</th>
-						<th>Descripcion</th>
 						<th>Valor</th>
 						<th>Categoria</th>
-						<th>Mostrar</th>
+						<th>Ver</th>
 					</thead>
 					<tbody>
 					</tbody>
@@ -75,12 +74,11 @@ if($ver=="ventas"){
 					<table>
 						<thead>
 							<th>N°</th>
+							<th>Fecha</th>
 							<th>ID</th>
-							<th>Nombre</th>
 							<th>Telefono</th>
 							<th>Total</th>
 							<th>Entregado</th>
-							<th>Notas</th>
 						</thead>
 						<tbody>
 						</tbody>

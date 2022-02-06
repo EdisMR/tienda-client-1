@@ -25,11 +25,7 @@ function insertRows(){
 		tRow.appendChild(tLi)
 		
 		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].descripcion
-		tRow.appendChild(tLi)
-		
-		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].valor
+		tLi.textContent=`₡${fetchResult[x].valor}`
 		tRow.appendChild(tLi)
 		
 		tLi=document.createElement("td")

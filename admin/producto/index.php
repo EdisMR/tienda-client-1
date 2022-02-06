@@ -56,7 +56,7 @@
 						</div>
 					</div>
 					<div class="inputContainer">
-						<div class="inputDescription">Valor de C/U:&nbsp;&nbsp;</div>
+						<div class="inputDescription">Valor de C/U (₡):&nbsp;&nbsp;</div>
 						<div class="inputData">
 							<input  required type="number" min="0" name="valor">
 						</div>

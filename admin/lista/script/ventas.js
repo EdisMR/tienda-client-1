@@ -13,16 +13,19 @@ function insertRows(){
 		tLi=document.createElement("td")
 		tLi.textContent=fetchResult[x].idauto
 		tRow.appendChild(tLi)
-		
+
+		moment.locale('es')
+		let tempDate=moment(new Date(parseInt(fetchResult[x].idaleatorio,36))).fromNow()
 		tLi=document.createElement("td")
-		thref=document.createElement("a")
-		thref.href=`${urlBaseEnlaceDetalle}${fetchResult[x].idaleatorio}`
-		thref.textContent=fetchResult[x].idaleatorio
-		tLi.appendChild(thref)
+		tLi.textContent=tempDate
 		tRow.appendChild(tLi)
 		
 		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].nombre
+		thref=document.createElement("a")
+		tLi.setAttribute("target","_blank")
+		thref.href=`${urlBaseEnlaceDetalle}${fetchResult[x].idaleatorio}`
+		thref.textContent=fetchResult[x].idaleatorio
+		tLi.appendChild(thref)
 		tRow.appendChild(tLi)
 
 		tLi=document.createElement("td")
@@ -44,10 +47,6 @@ function insertRows(){
 		}else{
 			tLi.textContent="No"
 		}
-		tRow.appendChild(tLi)
-	
-		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].notas
 		tRow.appendChild(tLi)
 		
 		fragment.appendChild(tRow)

@@ -29,7 +29,6 @@ function sendMainForm(){
 			top: 0,
 			behavior: 'smooth',
 		})
-		console.log(r);
 		mainForm.reset()
 		imageForm.reset()
 		removeImages()

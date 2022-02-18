@@ -19,7 +19,6 @@ function nuevaVenta() {
 		})
 		.then(e => e.text())
 		.then(e => {
-			console.log(e)
 			alertify.success("Venta realizada")
 		})
 		.catch(e=>{

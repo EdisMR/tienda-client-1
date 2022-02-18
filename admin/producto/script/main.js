@@ -61,11 +61,9 @@ imageForm.addEventListener("input", (e) => {
 
 		if (tempArray.length >(4-countImagesValue())) {
 			alertify.warning("Algunas imágenes fueron ignoradas debido a que sólo se permite la subida de 4 imágenes")
-			console.log("1");
 		}
 	}else{
 		alertify.warning("Algunas imágenes fueron ignoradas debido a que sólo se permite la subida de 4 imágenes")
-		console.log("2");
 	}
 
 }, false)

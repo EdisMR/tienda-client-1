@@ -51,7 +51,6 @@ function sendMainForm(){
 		return r.text()
 	})
 	.then(r=>{
-		/* console.log(r); */
 		mainForm.prodid.disabled=true
 		mainForm.imagenes.disabled=true
 		alertify.success("Los datos se han enviado")

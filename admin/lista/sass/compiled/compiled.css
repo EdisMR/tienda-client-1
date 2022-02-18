@@ -43,11 +43,32 @@ table tr:hover {
 .moreResultsButton {
   display: flex;
   justify-content: flex-end;
-  padding-right: 50px;
-  padding-top: 40px;
 }
 .moreResultsButton button {
   margin: 10px;
+}
+
+#lastResultsBTN, #moreResultsBTN, #newItem {
+  cursor: pointer;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: var(--color1);
+  color: white;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: var(--color1Hover);
+}
+button:active {
+  background-color: var(--color1Active);
+}
+
+.buttonNew {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 700px) {

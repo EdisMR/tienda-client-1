@@ -15,7 +15,7 @@ const createProductScript = "/admin/private-scripts/new-product.php"
 const editProductScript = "/admin/private-scripts/edit-product.php"
 const infoOneProduct = "/common-scripts/info-one-product.php/?"
 
-const fillErrors=document.getElementById("show-error")
+const fillErrors = document.getElementById("show-error")
 
 /* Animacion cuando carga los datos del fetch */
 const animation1 = gsap.timeline({
@@ -28,6 +28,11 @@ const animation1 = gsap.timeline({
 
 /* Images for the Input */
 var imagesValue = "";
+
+function countImagesValue() {
+	let tempValue = imagesValue.split(",")
+	return tempValue.length - 1
+}
 
 
 function randomImageName() {
@@ -45,14 +50,29 @@ function removeImageNameInInput(value) {
 }
 
 imageForm.addEventListener("input", (e) => {
-	Array.from(imageForm.imagen.files).forEach(elm => {
-		subirItem(elm)
-	})
+
+	if (countImagesValue() < 3) {
+
+
+		let tempArray = Array.from(imageForm.imagen.files)
+		for (let x = 0; x < (4-countImagesValue()); x++) {
+			subirItem(tempArray[x])
+		}
+
+		if (tempArray.length >(4-countImagesValue())) {
+			alertify.warning("Algunas imágenes fueron ignoradas debido a que sólo se permite la subida de 4 imágenes")
+			console.log("1");
+		}
+	}else{
+		alertify.warning("Algunas imágenes fueron ignoradas debido a que sólo se permite la subida de 4 imágenes")
+		console.log("2");
+	}
+
 }, false)
 
 /* item es el item que llamo a la funcion - esta funcion envia
  la imagen al servidor y devuelve el nombre con el que fue guardado */
-function subirItem(elm, item) {
+async function subirItem(elm, item) {
 	let randomImgName = randomImageName()
 
 	let formDataInputs = new FormData()

@@ -16,12 +16,6 @@
 			<span>Productos</span>
 		</a>
 	</div>
-	
-	<div class="block header-item">
-		<a class="header-link" href="/admin/producto/">
-			<span>Nuevo Producto</span>
-		</a>
-	</div>
 
 	<div class="block header-item">
 		<a class="header-link" href="/admin/lista/?ver=ventas">

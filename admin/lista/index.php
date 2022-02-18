@@ -1,11 +1,11 @@
 <?php require "../global/includes.php";
 $ver = $_GET["ver"];
 $tituloPagina;
-if($ver=="productos"){
-	$tituloPagina="Lista de Productos";
+if ($ver == "productos") {
+	$tituloPagina = "Lista de Productos";
 }
-if($ver=="ventas"){
-	$tituloPagina="Lista de Ventas";
+if ($ver == "ventas") {
+	$tituloPagina = "Lista de Ventas";
 }
 ?>
 
@@ -18,7 +18,7 @@ if($ver=="ventas"){
 	<?php htmlHead(); ?>
 	<link rel="stylesheet" href="./sass/compiled/compiled.css">
 	<title><?php print $tituloPagina; ?></title>
-	
+
 
 	<?php
 	if ($ver == "productos") {
@@ -45,9 +45,23 @@ if($ver=="ventas"){
 	<main>
 		<div class="main-title">
 			<h1>
-			<?php print $tituloPagina;?>. Página <span></span>
+				<?php print $tituloPagina; ?>. Página <span></span>
 			</h1>
 		</div>
+
+		<?php
+		if ($ver == "productos") {
+		?>
+				<div class="buttonNew">
+					<a href="/admin/producto/">
+					<button id="newItem">
+						<span>Nuevo Producto</span>
+					</button>
+				</a>
+				</div>
+		<?php
+		}
+		?>
 
 		<?php
 		if ($ver == "productos") {
@@ -91,10 +105,10 @@ if($ver=="ventas"){
 		}
 		?>
 
-<div class="moreResultsButton">
-	<button id="lastResultsBTN">Anteriores</button>
-	<button id="moreResultsBTN">Siguientes</button>
-</div>
+		<div class="moreResultsButton">
+			<button id="lastResultsBTN">Anteriores</button>
+			<button id="moreResultsBTN">Siguientes</button>
+		</div>
 
 	</main>
 </body>

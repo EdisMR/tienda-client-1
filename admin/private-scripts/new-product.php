@@ -8,12 +8,16 @@ $descripcion=$_POST["descripcion"];
 $valor=$_POST["valor"];
 $cantidad=$_POST["cantidad"];
 $categoria=$_POST["categoria"];
-$disp=((bool) $_POST["disponible"]);
 $imagenes=$_POST["imagenes"];
 
+$disp;
 $disponible;
-if($disp){
-	$disponible=1;
+
+if(isset($_POST["disponible"])){
+	$disp=((bool) $_POST["disponible"]);
+	if($disp){
+		$disponible=1;
+	}
 }else{
 	$disponible=0;
 }

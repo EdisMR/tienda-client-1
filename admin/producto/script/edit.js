@@ -51,10 +51,6 @@ function sendMainForm(){
 		return r.text()
 	})
 	.then(r=>{
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		})
 		/* console.log(r); */
 		mainForm.prodid.disabled=true
 		mainForm.imagenes.disabled=true

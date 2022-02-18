@@ -1,4 +1,5 @@
 <?php
+require "../../common-scripts/conectarbd.php";
 
 $imageURL=$_POST["imagenEliminar"];
 $rutaEliminar="../../images/$imageURL";

@@ -61,7 +61,7 @@
 			</div>
 
 			<div id="productDetails">
-
+				
 			</div>
 			
 			<div class="buttonsContainer">

@@ -72,7 +72,7 @@
 					<div class="inputContainer">
 						<div class="inputDescription">Categoría:&nbsp;&nbsp;</div>
 						<div class="inputData">
-							<input  required type="text" autocomplete="off" name="categoria" pattern="([A-Za-z]*\s{0,1}[,]{0,1})*">
+							<input  required type="text" autocomplete="off" name="categoria" pattern="([A-Za-z]*\s{0,1}[,]{0,1})*" spellcheck="false">
 						</div>
 					</div>
 					<div class="inputContainer">

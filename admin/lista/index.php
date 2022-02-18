@@ -70,7 +70,7 @@ if ($ver == "ventas") {
 				<table>
 					<thead>
 						<th>N°</th>
-						<th>Id</th>
+						<th>ID</th>
 						<th>Titulo</th>
 						<th>Valor</th>
 						<th>Categoria</th>

@@ -151,7 +151,7 @@ form{
 	height: 30px;
 	border:0px;
 	border-radius: 50%;
-	background-image: url("/images/delete.svg");
+	background-image: url("/images/system-images/delete.svg");
 	background-size: 30px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -176,5 +176,11 @@ form{
 	visibility: hidden;
 	img{
 		width: 30px;
+	}
+}
+
+.validInput{
+	&:invalid{
+		border-color: rgb(196, 42, 42);
 	}
 }

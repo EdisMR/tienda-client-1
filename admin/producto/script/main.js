@@ -230,3 +230,16 @@ function deshabilitarInputs() {
 function restartInitialStatus() {
 
 }
+
+
+function evaluateState(){
+	let inputs=Array.from(mainForm.querySelectorAll("input,textarea"))
+	inputs.forEach(elm=>{
+		elm.addEventListener("blur",()=>{
+			if(elm.value){
+				elm.classList.add("validInput")
+			}
+		});
+	})
+}
+evaluateState()

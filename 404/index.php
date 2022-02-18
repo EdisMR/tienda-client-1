@@ -7,7 +7,7 @@
 <body>
 	<main>
 		<div>
-			<img src="/images/404-1.webp" alt="404 page not found image">
+			<img src="/images/system-images/404-1.webp" alt="404 page not found image">
 		</div>
 		
 		<div>

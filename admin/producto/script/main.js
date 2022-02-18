@@ -56,7 +56,7 @@ imageForm.addEventListener("input", (e) => {
 
 		let tempArray = Array.from(imageForm.imagen.files)
 		for (let x = 0; x < (4-countImagesValue()); x++) {
-			subirItem(tempArray[x])
+			if(tempArray[x]){subirItem(tempArray[x])}
 		}
 
 		if (tempArray.length >(4-countImagesValue())) {

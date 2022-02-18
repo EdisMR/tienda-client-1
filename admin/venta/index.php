@@ -59,6 +59,10 @@
 				</form>
 
 			</div>
+
+			<div id="productDetails">
+
+			</div>
 			
 			<div class="buttonsContainer">
 				<button id="sendData">Editar esta Venta</button>

@@ -1,6 +1,4 @@
 <?php
-require "../../common-scripts/conectarbd.php";
-
 $MAXsIZE = 2000000;
 $directory = "/images";
 
@@ -21,5 +19,3 @@ $newRoute = "../../images/$newname.$extension";
 move_uploaded_file($fileInput['tmp_name'], $newRoute);
 
 print "$newname.$extension";
-
-mysqli_close($conn);

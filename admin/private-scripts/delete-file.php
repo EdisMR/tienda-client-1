@@ -1,5 +1,4 @@
 <?php
-require "../../common-scripts/conectarbd.php";
 
 $imageURL=$_POST["imagenEliminar"];
 $rutaEliminar="../../images/$imageURL";
@@ -9,6 +8,4 @@ if(unlink($rutaEliminar)){
 }else{
 	print "nope";
 }
-
-mysqli_close($conn);
 ?>

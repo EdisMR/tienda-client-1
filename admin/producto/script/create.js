@@ -44,11 +44,6 @@ function sendMainForm(){
 }
 
 
-function randomProductID() {
-	let tempData = new Date()
-	return (tempData.valueOf()).toString(36)
-}
-
 function fillRandomIDInput(){
 	/* Llenar ID con valor random */
 	mainForm.prodid.value = randomProductID()

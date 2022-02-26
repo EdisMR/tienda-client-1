@@ -85,3 +85,10 @@ toSellBtn.addEventListener("click", () => {
 		function () {
 		}).setHeader("Ingrese el ID de la venta");
 }, false)
+
+
+/* Generador de ID aleatorio */
+function randomProductID() {
+	let tempData = new Date()
+	return (tempData.valueOf()).toString(36)
+}

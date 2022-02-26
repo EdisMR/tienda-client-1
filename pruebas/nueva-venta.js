@@ -1,8 +1,3 @@
-function randomProductID() {
-	let tempData = new Date()
-	return (tempData.valueOf()).toString(36)
-}
-
 function nuevaVenta() {
 	let algo = new FormData()
 	algo.append("idaleatorio", randomProductID())

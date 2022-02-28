@@ -11,13 +11,14 @@
 	<body>
 		<?php htmlHeader(); ?>
 		<main>
-			<div class="main-title">
-				<h1>
+      <div class="main-title">
+        <h1>
 					Inicio
 				</h1>
 			</div>
 
-			
+
 		</main>
+    <?php htmlFooter(); ?>
 	</body>
 </html>

@@ -31,7 +31,14 @@ var imagesValue = "";
 
 function countImagesValue() {
 	let tempValue = imagesValue.split(",")
-	return tempValue.length - 1
+  let counter=0;
+  for(x in tempValue){
+    if(tempValue[x]!=""){
+      counter++
+    }
+  }
+
+	return counter
 }
 
 
@@ -51,7 +58,7 @@ function removeImageNameInInput(value) {
 
 imageForm.addEventListener("input", (e) => {
 
-	if (countImagesValue() < 3) {
+	if (countImagesValue() <= 3) {
 
 
 		let tempArray = Array.from(imageForm.imagen.files)
@@ -65,6 +72,8 @@ imageForm.addEventListener("input", (e) => {
 	}else{
 		alertify.warning("Algunas imágenes fueron ignoradas debido a que sólo se permite la subida de 4 imágenes")
 	}
+
+  imageForm.imagen.value=""
 
 }, false)
 
@@ -162,7 +171,7 @@ function removeIMG(imageDataURL) {
 	parentElement.querySelector("button").style.visibility = "hidden"
 }
 
-/* Eliminar todas las imagenes del formulario 
+/* Eliminar todas las imagenes del formulario
 (para cuando se resetea el formulario) */
 function deleteAllImages() {
 	let buttonsRemoveImage = document.querySelectorAll(`.images-grid-container button`)

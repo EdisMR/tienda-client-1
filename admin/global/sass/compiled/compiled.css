@@ -20,6 +20,16 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #17bbe4 !important;
+  display: inline-block;
+  transition-duration: var(--globalTransition);
+}
+a:active {
+  transform: scale(0.9);
+  background-color: #202020;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -36,6 +46,9 @@ header {
   top: 20px;
   left: 20px;
   z-index: 200;
+}
+header a {
+  color: aliceblue !important;
 }
 
 .header-item {

@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 100px;
 	width: 100%;
 
 }
@@ -38,6 +37,9 @@
 		}}
 }
 
+[name=productos]{
+  visibility: hidden;
+}
 
 .buttonsContainer{
 	display: flex;
@@ -46,4 +48,54 @@
 	width: 100%;
 	height: auto;
 
+}
+
+
+#productDetails{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	margin-bottom: 100px;
+
+}
+
+table{
+  border: 1px solid aliceblue;
+}
+
+thead{
+  font-weight: 700;
+  tr{
+    background-color: rgba(0, 255, 255, 0.144) !important;
+  }
+}
+
+tbody{
+}
+
+tr{
+  &:nth-child(odd){
+    background-color: hsla(208, 100%, 97%, 0.068);
+  }
+  &:hover{
+    background-color: hsla(208, 100%, 97%, 0.164);
+  }
+}
+
+td{
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+[name=idaleatorio]{
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 6px;
+  padding: 10px;
+}
+
+#contactar{
+  margin-top: 20px;
 }

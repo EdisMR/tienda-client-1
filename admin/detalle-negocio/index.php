@@ -37,5 +37,6 @@
 				<button id="sendData">Enviar Datos</button>
 			</div>
 	</main>
+  <?php htmlFooter(); ?>
 </body>
 </html>

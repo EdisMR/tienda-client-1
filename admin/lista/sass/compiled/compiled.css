@@ -19,16 +19,6 @@ th, td {
   border-bottom: 2px solid rgba(204, 204, 204, 0.219);
 }
 
-table a {
-  color: #17bbe4 !important;
-  display: inline-block;
-  transition-duration: var(--globalTransition);
-}
-table a:active {
-  transform: scale(0.9);
-  background-color: #202020;
-}
-
 table tr {
   transition-duration: var(--globalTransition);
   transform: scale(1);
@@ -65,10 +55,16 @@ button:active {
   background-color: var(--color1Active);
 }
 
-.buttonNew {
+.buttonActionBar {
   margin: 20px;
   display: flex;
   justify-content: flex-end;
+}
+
+.functionalButtons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 700px) {

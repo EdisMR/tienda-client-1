@@ -127,6 +127,8 @@
 			</div>
 		</section>
 	</main>
+  
+  <?php htmlFooter(); ?>
 </body>
 
 </html>

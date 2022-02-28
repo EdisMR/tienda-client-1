@@ -30,6 +30,10 @@
   font-family: consolas;
 }
 
+[name=imagenes] {
+  visibility: hidden;
+}
+
 .text-5-items {
   font-size: 20px !important;
 }

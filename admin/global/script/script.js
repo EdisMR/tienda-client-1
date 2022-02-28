@@ -92,3 +92,5 @@ function randomProductID() {
 	let tempData = new Date()
 	return (tempData.valueOf()).toString(36)
 }
+
+moment.locale('es')

@@ -9,17 +9,16 @@ function insertRows(){
 		let tLi
 		let thref
 
-		
+
 		tLi=document.createElement("td")
 		tLi.textContent=fetchResult[x].idauto
 		tRow.appendChild(tLi)
 
-		moment.locale('es')
 		let tempDate=moment(new Date(parseInt(fetchResult[x].idaleatorio,36))).fromNow()
 		tLi=document.createElement("td")
 		tLi.textContent=tempDate
 		tRow.appendChild(tLi)
-		
+
 		tLi=document.createElement("td")
 		thref=document.createElement("a")
 		tLi.setAttribute("target","_blank")
@@ -35,12 +34,12 @@ function insertRows(){
 		thref.textContent=fetchResult[x].telefono
 		tLi.appendChild(thref)
 		tRow.appendChild(tLi)
-		
+
 		tLi=document.createElement("td")
 		tLi.textContent=`₡${fetchResult[x].total}`
 		tRow.appendChild(tLi)
-		
-		
+
+
 		tLi=document.createElement("td")
 		if(Boolean(Number(fetchResult[x].entregado))){
 			tLi.textContent="Si"
@@ -48,7 +47,7 @@ function insertRows(){
 			tLi.textContent="No"
 		}
 		tRow.appendChild(tLi)
-		
+
 		fragment.appendChild(tRow)
 	}
 

@@ -4,6 +4,9 @@ const header = {
 	visible: false
 }
 
+const closeSession=document.getElementById("closeSession")
+const urlSession="/admin/private-scripts/session.php"
+
 const headerAnimation=gsap.timeline({paused:true,})
 .from(".header-item",{
 	duration:.2,
@@ -94,3 +97,17 @@ function randomProductID() {
 }
 
 moment.locale('es')
+
+
+/* CLOSE SESSION */
+closeSession.addEventListener("click",()=>{
+  let data=new FormData()
+  data.append("type","finish")
+  fetch(urlSession,{
+    body:data,
+    method:"POST"
+  })
+  .then(e=>{
+    location.reload()
+  })
+})

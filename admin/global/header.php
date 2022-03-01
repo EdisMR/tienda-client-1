@@ -49,3 +49,5 @@
 	</div>
 
 </header>
+
+<button id="closeSession">Cerrar Sesión</button>

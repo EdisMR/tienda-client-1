@@ -117,3 +117,19 @@ header{
 	}
 }
 
+#closeSession{
+  padding: 5px 10px;
+  background-color: var(--color1);
+  color: white;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color1);
+  &:hover{
+    background-color: var(--color1Hover);
+  }
+  &:active{
+    background-color: var(--color1Active);
+  }
+}

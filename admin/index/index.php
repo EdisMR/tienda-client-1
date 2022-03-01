@@ -20,7 +20,6 @@ sessionVerifier();
 				</h1>
 			</div>
 
-      <button id="closeSession">Cerrar Sesión</button>
 
 		</main>
     <?php htmlFooter(); ?>

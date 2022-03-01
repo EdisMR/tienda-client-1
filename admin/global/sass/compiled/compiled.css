@@ -127,6 +127,23 @@ header a {
   font-weight: bold;
 }
 
+#closeSession {
+  padding: 5px 10px;
+  background-color: var(--color1);
+  color: white;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color1);
+}
+#closeSession:hover {
+  background-color: var(--color1Hover);
+}
+#closeSession:active {
+  background-color: var(--color1Active);
+}
+
 @media (max-width: 700px) {
   .main-title {
     margin-left: 90px;

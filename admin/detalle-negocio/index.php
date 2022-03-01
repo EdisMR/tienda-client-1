@@ -1,4 +1,7 @@
-<?php require "../global/includes.php";?>
+<?php
+require "../global/includes.php";
+sessionVerifier();
+?>
 
 <!DOCTYPE html>
 <html lang="es">

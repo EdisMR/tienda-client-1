@@ -1,4 +1,6 @@
-<?php require "../global/includes.php";
+<?php
+require "../global/includes.php";
+sessionVerifier();
 $ver = $_GET["ver"];
 $tituloPagina;
 if ($ver == "productos") {

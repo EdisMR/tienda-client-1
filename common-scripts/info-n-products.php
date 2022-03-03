@@ -9,9 +9,10 @@ $MostradoActual = $_GET["page"];
 
 $inicioQuery = $cuantos * (intval($MostradoActual)-1);
 
-$query = "select * from $tablaProductos ORDER BY idauto DESC LIMIT $cuantos OFFSET $inicioQuery";
+/* $query = "select * from $tablaProductos ORDER BY idauto DESC LIMIT $cuantos OFFSET $inicioQuery"; */
+$query = "select * from $tablaProductos ORDER BY idauto DESC";
 
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($conn, $queray);
 
 $myArray=array();
 while($row = mysqli_fetch_assoc($result)) {

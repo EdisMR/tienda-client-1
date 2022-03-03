@@ -1,0 +1,31 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-action{
+  font-size: 50px;
+}
+
+.logo{
+  display: inline-block;
+  width: 50px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width:600px){
+  header{
+    left: 0%;
+    transform: none;
+  }
+}

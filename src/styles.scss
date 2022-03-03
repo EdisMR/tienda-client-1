@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "FabricMDL2Icons";
+  src: url("assets/font/fabric-icons-61f3452f.woff") format('woff');
+}
+
+
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+
+.ms-Icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'FabricMDL2Icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+// Mixins
+@mixin ms-Icon--Add { content: "\E710"; }
+@mixin ms-Icon--AddMedium { content: "\ECA1"; }
+@mixin ms-Icon--Home { content: "\E80F"; }
+@mixin ms-Icon--Remove { content: "\E738"; }
+@mixin ms-Icon--RemoveFilter { content: "\EB08"; }
+@mixin ms-Icon--RemoveFromTrash { content: "\F82B"; }
+@mixin ms-Icon--ShoppingCart { content: "\E7BF"; }
+@mixin ms-Icon--ShoppingCartSolid { content: "\F342"; }
+
+
+// Classes
+.ms-Icon--Add:before { @include ms-Icon--Add }
+.ms-Icon--AddMedium:before { @include ms-Icon--AddMedium }
+.ms-Icon--Home:before { @include ms-Icon--Home }
+.ms-Icon--Remove:before { @include ms-Icon--Remove }
+.ms-Icon--RemoveFilter:before { @include ms-Icon--RemoveFilter }
+.ms-Icon--RemoveFromTrash:before { @include ms-Icon--RemoveFromTrash }
+.ms-Icon--ShoppingCart:before { @include ms-Icon--ShoppingCart }
+.ms-Icon--ShoppingCartSolid:before { @include ms-Icon--ShoppingCartSolid }
+

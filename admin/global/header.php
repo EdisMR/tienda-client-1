@@ -50,4 +50,6 @@
 
 </header>
 
-<button id="closeSession">Cerrar Sesión</button>
+<button id="closeSession">
+	<img src="/images/system-images/exit.webp" alt="exit">
+</button>

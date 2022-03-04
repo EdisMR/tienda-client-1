@@ -118,14 +118,18 @@ header{
 }
 
 #closeSession{
-  padding: 5px 10px;
   background-color: var(--color1);
-  color: white;
   border-radius: 10px;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 2px;
+  right: 2px;
   background-color: var(--color1);
+  padding: 0;
+  img{
+    display: inline-block;
+    width: 30px;
+    filter: invert(.9);
+  }
   &:hover{
     background-color: var(--color1Hover);
   }

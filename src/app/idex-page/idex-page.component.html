@@ -1,1 +1,21 @@
-<p>idex-page works!</p>
+<section class="cards-grid-container">
+  <ng-container *ngFor="let producto of allProd">
+
+    <!-- CARDS -->
+    <article class="card-product">
+      <div class="card-image">
+        imagen
+      </div>
+
+      <div class="card-title">
+        <span>{{producto.titulo}}</span>
+      </div>
+
+      <div class="card-price">
+        <span>&#x20A1;{{producto.valor}}</span>
+      </div>
+
+    </article>
+
+  </ng-container>
+</section>

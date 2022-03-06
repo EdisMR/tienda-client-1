@@ -5,9 +5,9 @@ $cuantos = 25;
 
 /* Numero que indica la pagina de resultados que se esta viendo */
 /* http://localhost/common-scripts/ver-n-prod.php/?actual=0 */
-$MostradoActual = $_GET["page"];
+/* $MostradoActual = $_GET["page"];
 
-$inicioQuery = $cuantos * (intval($MostradoActual)-1);
+$inicioQuery = $cuantos * (intval($MostradoActual)-1); */
 
 /* $query = "select * from $tablaProductos ORDER BY idauto DESC LIMIT $cuantos OFFSET $inicioQuery"; */
 $query = "select * from $tablaProductos ORDER BY idauto DESC";

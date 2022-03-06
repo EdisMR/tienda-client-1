@@ -11,6 +11,7 @@ const dateInner=document.getElementById("dateInner");
 
 /* Traer los datos del producto */
 function getSellDetails(){
+  showLoader()
 	let queryString = window.location.search;
 	let urlParams = new URLSearchParams(queryString);
 	let ventaid = urlParams.get('ventaid');
@@ -29,6 +30,9 @@ function getSellDetails(){
 	.catch(e=>{
 		alertify.error("Error al traer los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 
 
@@ -93,6 +97,7 @@ function productDetailsTableInner(data){
 sendFormButton.addEventListener("click",sendMainForm,false)
 
 function sendMainForm(){
+  showLoader()
 	habilitarInputs()
 
 	let infoDataForm=new FormData(formulario)
@@ -114,7 +119,10 @@ function sendMainForm(){
 	.catch(e=>{
 		alertify.error("Ha ocurrido un error")
 	})
-	deshabilitarInputs()
+  .finally(e=>{
+    hideLoader()
+  })
+  deshabilitarInputs()
 }
 
 

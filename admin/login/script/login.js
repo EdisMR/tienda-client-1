@@ -12,6 +12,7 @@ formulario.addEventListener("submit",validateForm,false)
 
 function validateForm(value){
   value.preventDefault()
+  validating()
   let data=new FormData(formulario);
   data.append("type","validate")
   fetch(urlValidate,{
@@ -23,10 +24,24 @@ function validateForm(value){
     if(e=="1"){
       location.href="/admin/"
     }else{
+      restoreValidating()
       alertify.error("Contraseña incorrecta")
     }
   })
   .catch(e=>{
-
+    restoreValidating()
   })
 }
+
+
+function validating(){
+  sendInfo.disabled=true
+  showLoader()
+}
+
+function restoreValidating(){
+  sendInfo.disabled=false
+  hideLoader()
+}
+
+hideLoader()

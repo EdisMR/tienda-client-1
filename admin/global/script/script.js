@@ -6,6 +6,7 @@ const header = {
 
 const closeSession=document.getElementById("closeSession")
 const urlSession="/admin/private-scripts/session.php"
+const loaderTag=document.getElementById("loader-loading-action")
 
 const headerAnimation=gsap.timeline({paused:true,})
 .from(".header-item",{
@@ -101,6 +102,7 @@ moment.locale('es')
 
 /* CLOSE SESSION */
 closeSession.addEventListener("click",()=>{
+  showLoader()
   let data=new FormData()
   data.append("type","finish")
   fetch(urlSession,{
@@ -110,4 +112,19 @@ closeSession.addEventListener("click",()=>{
   .then(e=>{
     location.reload()
   })
+  .finally(e=>{
+    hideLoader()
+  })
 })
+
+/* LOADER */
+function showLoader(){
+  loaderTag.style.display="initial"
+}
+
+
+function hideLoader(){
+  loaderTag.style.display="none"
+}
+
+hideLoader()

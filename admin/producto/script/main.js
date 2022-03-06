@@ -80,6 +80,7 @@ imageForm.addEventListener("input", (e) => {
 /* item es el item que llamo a la funcion - esta funcion envia
  la imagen al servidor y devuelve el nombre con el que fue guardado */
 async function subirItem(elm, item) {
+  showLoader()
 	let randomImgName = randomImageName()
 
 	let formDataInputs = new FormData()
@@ -107,6 +108,9 @@ async function subirItem(elm, item) {
 		.catch(e => {
 			alertify.error("No se cargó la imagen")
 		})
+    .finally(e=>{
+      hideLoader()
+    })
 }
 
 function setIMG(stringRoute) {
@@ -138,6 +142,7 @@ imageButtonDeleteProduct.forEach(elm => {
 
 /* ELIMINAR UNA IMAGEN DEL SERVIDOR */
 function deleteImageFromServer(e, imageName) {
+  showLoader()
 	let imagenURL
 	e ? imagenURL = e.target.dataset.url : imagenURL = imageName
 
@@ -159,6 +164,9 @@ function deleteImageFromServer(e, imageName) {
 		.catch(ec => {
 			alertify.warning("No se ha borrado la imagen")
 		})
+    .finally(e=>{
+      hideLoader()
+    })
 }
 
 /* Eliminar una sola imagen y ocultar el boton para eliminarla*/

@@ -9,11 +9,12 @@ getProductDetails()
 
 /* Traer los datos del producto */
 function getProductDetails(){
+  showLoader()
 	let queryString = window.location.search;
 	let urlParams = new URLSearchParams(queryString);
 	let productid = urlParams.get('productid');
 	let urlQueryString=`${window.location.origin}${infoOneProduct}productid=${productid}`
-	
+
 	fetch(urlQueryString,{
 		method:"GET"
 	})
@@ -28,6 +29,9 @@ function getProductDetails(){
 	.catch(e=>{
 		alertify.error("Error al traer los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 
 buttonResetData.addEventListener("click",()=>{
@@ -40,6 +44,7 @@ buttonResetData.addEventListener("click",()=>{
 
 
 function sendMainForm(){
+  showLoader()
 	habilitarInputs()
 	let mainFormData=new FormData(mainForm)
 
@@ -59,6 +64,9 @@ function sendMainForm(){
 		deshabilitarInputs()
 		alertify.error("No se han enviado los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 
 function fillValues(){

@@ -14,6 +14,7 @@ buttonResetData.addEventListener("click",()=>{
 })
 
 function sendMainForm(){
+  showLoader()
 	habilitarInputs()
 	let mainFormData=new FormData(mainForm)
 
@@ -41,6 +42,9 @@ function sendMainForm(){
 		deshabilitarInputs()
 		alertify.error("No se han enviado los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 
 

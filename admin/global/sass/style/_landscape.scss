@@ -137,3 +137,13 @@ header{
     background-color: var(--color1Active);
   }
 }
+
+
+#loader-loading-action{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  img{
+    width: 50px;
+  }
+}

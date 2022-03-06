@@ -18,6 +18,7 @@ const tableBody=document.querySelector("tbody")
 let fetchResult=JSON.parse("{}")
 
 function getItems(){
+  showLoader()
 	params=new URLSearchParams({
 		"page":actualPage
 	})
@@ -40,6 +41,9 @@ function getItems(){
 	.catch(e=>{
 		alertify.warning("Error al traer los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 
 actualPage=1

@@ -4,6 +4,7 @@ const formulario=document.forms[0]
 var infoNegocio=""
 
 function getInfo(){
+  showLoader()
 	fetch("/common-scripts/getBusinessInfo.php")
 	.then(e=>e.json())
 	.then(e=>{
@@ -14,6 +15,9 @@ function getInfo(){
 	.catch(e=>{
 		alertify.warning("Error al traer los datos")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }
 getInfo()
 
@@ -22,6 +26,7 @@ buttonEnviar.addEventListener("click",sendData,false)
 
 function sendData(e){
 	e.preventDefault()
+  showLoader()
 
 	let datosFetch=new FormData(formulario)
 
@@ -35,4 +40,7 @@ function sendData(e){
 	}).catch(e=>{
 		alertify.error("No se realizó el cambio")
 	})
+  .finally(e=>{
+    hideLoader()
+  })
 }

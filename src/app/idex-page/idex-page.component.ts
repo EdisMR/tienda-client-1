@@ -9,13 +9,20 @@ import { ProductsService } from '../products.service';
 export class IdexPageComponent implements OnInit {
 
   allProd=this._productsSvc.allProducts;
+  getAllProducts(){
+    this.allProd=this._productsSvc.allProducts;
+  }
 
+  getImage(data:string){
+    let tempArray=data.split(",");
+    return `http://tienda.localhost/images/${tempArray[0]}`
+  }
 
   constructor(private _productsSvc:ProductsService) { }
 
   ngOnInit(): void {
     setTimeout(()=>{
-      this.allProd=this._productsSvc.allProducts;
+      this.getAllProducts()
     },1000)
   }
 

@@ -7,10 +7,11 @@ header{
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(198deg 25% 46%);
+  background-color: var(--primaryBG);
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .header-button{

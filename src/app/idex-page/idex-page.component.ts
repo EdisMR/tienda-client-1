@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -18,7 +19,11 @@ export class IdexPageComponent implements OnInit {
     return `http://tienda.localhost/images/${tempArray[0]}`
   }
 
-  constructor(private _productsSvc:ProductsService) { }
+  navigateToProduct(dataID:string){
+    this._router.navigate(['producto',dataID])
+  }
+
+  constructor(private _productsSvc:ProductsService,private _router:Router) { }
 
   ngOnInit(): void {
     setTimeout(()=>{

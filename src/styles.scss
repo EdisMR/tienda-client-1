@@ -2,8 +2,11 @@
 :root{
   --globalTransition:.2s;
 
+  --primaryBG:hsl(198deg 25% 46%);
 }
 
 html{
   user-select: none;
+  font-family: 'Segoe UI', Tahoma, Roboto, sans-serif;
+  background-color: rgb(220, 224, 231);
 }

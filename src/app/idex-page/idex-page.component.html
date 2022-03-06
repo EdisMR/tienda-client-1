@@ -1,10 +1,9 @@
 <section class="cards-grid-container">
   <ng-container *ngFor="let producto of allProd">
-
-    <!-- CARDS -->
+<!-- CARDS -->
     <article class="card-product">
-      <div class="card-image">
-        <img [src]="getImage(producto.imagenes)" alt="imagen de producto">
+      <div class="card-image" (click)="navigateToProduct(producto.idaleatorio)">
+        <img [src]="getImage(producto.imagenes)" alt="imagen de producto" loading="lazy" draggable="false">
       </div>
 
       <div class="card-title">
@@ -19,3 +18,4 @@
 
   </ng-container>
 </section>
+

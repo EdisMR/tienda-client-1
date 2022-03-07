@@ -11,7 +11,11 @@ function insertRows(){
 
 
 		tLi=document.createElement("td")
-		tLi.textContent=fetchResult[x].idauto
+    if(Boolean(Number(fetchResult[x].entregado))){
+			tLi.textContent=`🟢${fetchResult[x].idauto}`
+		}else{
+			tLi.textContent=`🔴${fetchResult[x].idauto}`
+		}
 		tRow.appendChild(tLi)
 
 		let tempDate=moment(new Date(parseInt(fetchResult[x].idaleatorio,36))).fromNow()

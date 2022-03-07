@@ -21,6 +21,21 @@ sessionVerifier();
 			</div>
 
 
+			<div class="enlaces-main">
+
+
+      <div class="grid-container-menu">
+
+
+      <div class="item-main-menu"><a href="/admin/lista/?ver=productos">Productos</a></div>
+      <div class="item-main-menu"><a href="/admin/lista/?ver=ventas">Ventas</a></div>
+      <div class="item-main-menu"><a href="/admin/detalle-negocio/">Negocio</a></div>
+      <div class="item-main-menu"><a href="https://google.com" target="_blank" rel="noopener noreferrer">Tienda</a></div>
+
+      </div>
+
+
+      </div>
 		</main>
     <?php htmlFooter(); ?>
 	</body>

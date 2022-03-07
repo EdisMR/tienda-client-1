@@ -58,6 +58,7 @@ header{
 	color: var(--bodyColor);
 	box-sizing: border-box;
 	text-decoration: none;
+  border: 1px dashed var(--color1Active);
 	&:hover{
 		background-color: var(--color1Hover);
 	}

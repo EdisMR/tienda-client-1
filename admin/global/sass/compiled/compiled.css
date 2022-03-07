@@ -70,6 +70,7 @@ header a {
   color: var(--bodyColor);
   box-sizing: border-box;
   text-decoration: none;
+  border: 1px dashed var(--color1Active);
 }
 .header-link:hover {
   background-color: var(--color1Hover);

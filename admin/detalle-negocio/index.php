@@ -9,9 +9,9 @@ sessionVerifier();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Detalle del negocio</title>
+	<?php htmlHead(); ?>
 	<link rel="stylesheet" href="./sass/compiled/compiled.css">
 	<script src="/admin/detalle-negocio/script/main.js" defer></script>
-	<?php htmlHead(); ?>
 </head>
 <body>
 	<?php htmlHeader(); ?>

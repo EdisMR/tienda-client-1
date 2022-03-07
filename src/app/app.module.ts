@@ -25,7 +25,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

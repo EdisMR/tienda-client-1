@@ -12,6 +12,9 @@ header{
   padding-right: 10px;
   box-sizing: border-box;
   z-index: 100;
+  a{
+    text-decoration: none;
+  }
 }
 
 .header-button{
@@ -24,7 +27,7 @@ header{
   font-weight: 700;
   background-color: rgb(229, 236, 241);
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 4px;
   transition: var(--globalTransition);
   &:hover{
     background-color: rgb(250, 252, 253);

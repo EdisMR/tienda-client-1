@@ -1,2 +1,11 @@
+<p>HOla mundo</p>
+<p>HOla mundo</p>
+<p>HOla mundo</p>
+<p>HOla mundo</p>
 
-{{name}}
+
+<div class="keen-slider" #sliderRef>
+  <div *ngFor="let image of images,let i = index" [ngClass]="getClass(i)">
+    <img [src]="getImageURL(image)" alt="una imagen">
+  </div>
+</div>

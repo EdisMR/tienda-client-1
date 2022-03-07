@@ -10,7 +10,7 @@ export class ProductsService {
 
   private getProductsURL:string = 'http://tienda.localhost/common-scripts/info-n-products.php';
 
-  allProducts?:ProductsResponse[];
+  allProducts:ProductsResponse[]=[]
 
   getProducts():Observable<ProductsResponse[]>{
     return this.http.get<ProductsResponse[]>(this.getProductsURL)

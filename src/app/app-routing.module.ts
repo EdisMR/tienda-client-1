@@ -9,7 +9,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 const routes: Routes = [
   {path:"",component:IdexPageComponent},
   {path:"detalles",component:DetailsPageComponent},
-  {path:"producto/:id",component:ProductInfoComponent,},
+  {path:":id",component:ProductInfoComponent,},
 
   {path:"nosotros",component:AboutusComponent,},
   {path:"**",component:ErrorpageComponent,},

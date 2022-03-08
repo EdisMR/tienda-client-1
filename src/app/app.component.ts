@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { ProductsService } from './products.service';
 
 @Component({
@@ -9,12 +8,8 @@ import { ProductsService } from './products.service';
 })
 export class AppComponent {
 
-  _subscription:Subscription=this._products
-  .getProducts().subscribe((data)=>{
-    this._products.allProducts=data
-    this._subscription.unsubscribe()
-  })
 
   constructor(private _products:ProductsService){
+    this._products.initialRequest()
   }
 }

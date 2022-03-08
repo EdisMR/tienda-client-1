@@ -1,11 +1,33 @@
-<p>HOla mundo</p>
-<p>HOla mundo</p>
-<p>HOla mundo</p>
-<p>HOla mundo</p>
+
+<ng-container *ngIf="product">
+
+  <div class="product-detail-container">
+
+    <section class="section-details">
+      <div class="keen-slider" #sliderRef>
+        <div *ngFor="let image of images,let i = index" [ngClass]="getClass(i)">
+          <img [src]="getImageURL(image)" alt="una imagen">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-details">
 
 
-<div class="keen-slider" #sliderRef>
-  <div *ngFor="let image of images,let i = index" [ngClass]="getClass(i)">
-    <img [src]="getImageURL(image)" alt="una imagen">
+    <h1>{{product.titulo}}</h1>
+
+
+
+    <div class="price">
+      &#162;{{product.valor}}
+    </div>
+
+    <div class="product-description">
+      {{product.descripcion}}
+    </div>
+
+  </section>
+
   </div>
-</div>
+
+</ng-container>

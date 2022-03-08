@@ -68,3 +68,49 @@
     rgba(174, 63, 255, 1) 100%
   );
 }
+
+
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+/* ********************************* */
+
+img{
+  display: inline-block;
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+
+.product-detail-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.price{
+  font-weight: 700;
+}
+
+.product-description{
+  margin-top: 25px;
+}
+
+.section-details{
+  width: 40%;
+}
+
+@media (max-width:700px){
+
+.product-detail-container{
+}
+
+.section-details{
+  width: 90%;
+}
+
+}

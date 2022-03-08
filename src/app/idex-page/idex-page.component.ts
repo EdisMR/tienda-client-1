@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -16,11 +17,11 @@ export class IdexPageComponent implements OnInit {
 
   getImage(data:string){
     let tempArray=data.split(",");
-    return `http://tienda.localhost/images/${tempArray[0]}`
+    return `${environment.mainURL}images/${tempArray[0]}`
   }
 
   navigateToProduct(dataID:string){
-    this._router.navigate(['producto',dataID])
+    this._router.navigate(['',dataID])
   }
 
   constructor(private _productsSvc:ProductsService,private _router:Router) { }

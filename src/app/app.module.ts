@@ -11,6 +11,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 import { ProductsService } from './products.service';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     DetailsPageComponent,
     ProductInfoComponent,
     AboutusComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

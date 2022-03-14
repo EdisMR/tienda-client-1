@@ -21,7 +21,7 @@ export class IdexPageComponent implements OnInit {
   }
 
   navigateToProduct(dataID:string){
-    this._router.navigate(['',dataID])
+    this._router.navigate(['id',dataID])
   }
 
   constructor(private _productsSvc:ProductsService,private _router:Router) { }

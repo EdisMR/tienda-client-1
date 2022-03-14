@@ -9,10 +9,10 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 const routes: Routes = [
   {path:"",component:IdexPageComponent},
   {path:"detalles",component:DetailsPageComponent},
-  {path:":id",component:ProductInfoComponent,},
+  {path:"id/:id",component:ProductInfoComponent},
 
-  {path:"nosotros",component:AboutusComponent,},
-  {path:"**",component:ErrorpageComponent,},
+  {path:"nosotros",component:AboutusComponent},
+  {path:"**",component:ErrorpageComponent},
 ];
 
 @NgModule({

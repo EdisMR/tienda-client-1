@@ -1,15 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, } from '@angular/router';
 import { ProductsService } from '../products.service';
-import { environment } from 'src/environments/environment';
-import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 import { ProductsResponse } from '../products-response';
-
 @Component({
   selector: 'app-product-info',
   templateUrl: './product-info.component.html',
   styleUrls: [
-    '../../../node_modules/keen-slider/keen-slider.min.css',
     './product-info.component.scss',
   ],
 })
@@ -17,14 +13,6 @@ export class ProductInfoComponent implements OnInit {
   name: string = '';
   images: string[] = [];
   product!:ProductsResponse;
-
-  getImageURL(imageR: string) {
-    return `${environment.mainURL}images/${imageR}`;
-  }
-
-  getClass(item: number) {
-    return `keen-slider__slide number-slide${item + 1}`;
-  }
 
   defineProduct() {
     this._products.allProducts.forEach((elm) => {
@@ -40,28 +28,6 @@ export class ProductInfoComponent implements OnInit {
       if(elm!="")this.images.push(elm);
     })
   }
-
-  /* ************************* */
-  /* ************************* */
-  /* ************************* */
-
-  @ViewChild('sliderRef') sliderRef!: ElementRef<HTMLElement>;
-
-  slider?: KeenSliderInstance;
-
-  ngAfterViewInit() {
-    this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-      loop: true,
-    });
-  }
-
-  ngOnDestroy() {
-    if (this.slider) this.slider.destroy();
-  }
-
-  /* ************************* */
-  /* ************************* */
-  /* ************************* */
 
   constructor(
     private _activated: ActivatedRoute,

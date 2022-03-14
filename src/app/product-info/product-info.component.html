@@ -4,11 +4,7 @@
   <div class="product-detail-container">
 
     <section class="section-details">
-      <div class="keen-slider" #sliderRef>
-        <div *ngFor="let image of images,let i = index" [ngClass]="getClass(i)">
-          <img [src]="getImageURL(image)" alt="una imagen">
-        </div>
-      </div>
+        <app-slider [images]="images"></app-slider>
     </section>
 
     <section class="section-details">

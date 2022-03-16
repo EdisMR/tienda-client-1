@@ -33,7 +33,6 @@ export class ProductInfoComponent implements OnInit {
     this.productDetails.cantidad=parseInt(input)
   }
 
-
   setProduct() {
     this._products.allProducts.forEach((elm) => {
       if (elm.idaleatorio == this.name) {

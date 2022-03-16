@@ -19,6 +19,15 @@
   align-items: center;
   background-color: var(--color1);
   height: 200px;
+  border-radius: 20px;
+  transform: scale(1);
+  transition-duration: var(--globalTransition);
+  &:hover{
+    transform: scale(1.05);
+  }
+  &:active{
+    transform: scale(.94);
+  }
   a{
     display: inline-block;
     width: 50%;

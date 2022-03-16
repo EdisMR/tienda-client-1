@@ -1,28 +1,52 @@
-
 <ng-container *ngIf="product">
 
   <div class="product-detail-container">
 
     <section class="section-details">
-        <app-slider [images]="images"></app-slider>
+      <app-slider [images]="images"></app-slider>
     </section>
 
     <section class="section-details">
 
 
-    <h1>{{product.titulo}}</h1>
+      <h1>{{product.titulo}}</h1>
 
 
 
-    <div class="price">
-      &#162;{{product.valor}}
-    </div>
+      <div class="price">
+        &#162;{{product.valor}}
+      </div>
 
-    <div class="product-description">
-      {{product.descripcion}}
-    </div>
+      <div class="product-description">
+        {{product.descripcion}}
+      </div>
 
-  </section>
+
+      <section id="cartFunctionality">
+
+        <div class="buttonContainer">
+          <div class="selectionDiv">
+            <select name="selectNumber" id="selectNumber" (input)="setHowMany(selectNumber.value)" #selectNumber [disabled]="sent">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <button class="buttonAddToCart" (click)="addNewProduct()" [disabled]="sent">
+            <span>Añadir al carrito</span>
+          </button>
+
+          <div id="inCart" *ngIf="sent">
+            <a [routerLink]="['/detalles']">Ya está en el carrito</a>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
 
   </div>
 

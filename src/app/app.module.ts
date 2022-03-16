@@ -12,6 +12,7 @@ import { ProductsService } from './products.service';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { SliderComponent } from './slider/slider.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { SliderComponent } from './slider/slider.component';
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [ProductsService],
+  providers: [ProductsService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

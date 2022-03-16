@@ -17,6 +17,15 @@
   align-items: center;
   background-color: var(--color1);
   height: 200px;
+  border-radius: 20px;
+  transform: scale(1);
+  transition-duration: var(--globalTransition);
+}
+.item-main-menu:hover {
+  transform: scale(1.05);
+}
+.item-main-menu:active {
+  transform: scale(0.94);
 }
 .item-main-menu a {
   display: inline-block;

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  mainURL:"http://tienda.localhost/"
+  mainURL:"http://tienda.localhost/",
+  projectTitle:"Titulo de la tienda"
 };
 
 /*

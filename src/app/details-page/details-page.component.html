@@ -1,4 +1,36 @@
 
-<div *ngFor="let item of allProducts">
-  {{item.cantidad}}
-</div>
+<table>
+<tbody>
+
+  <tr *ngFor="let item of cart.products">
+
+    <td>
+      <img [src]="getImageURL(item.id)" alt="Image" (click)="gotoProduct(item.id)">
+    </td>
+
+      <td>
+        {{getItemName(item.id)}}
+      </td>
+
+      <td>
+        {{item.valor}}
+      </td>
+
+      <td>
+        <select [value]="item.cantidad" (input)="setItem(item.id,selectNumber.value)" #selectNumber>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+
+      <td>
+        <span (click)="deleteProduct(item.id)">D</span>
+      </td>
+
+    </tr>
+
+</tbody>
+</table>

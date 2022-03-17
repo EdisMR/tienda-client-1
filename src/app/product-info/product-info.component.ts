@@ -4,6 +4,7 @@ import { ProductsService } from '../products.service';
 import { ProductsResponse } from '../products-response';
 import { CartService } from '../cart.service';
 import { QueryProducts } from '../query-products';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-product-info',
   templateUrl: './product-info.component.html',
@@ -62,7 +63,7 @@ export class ProductInfoComponent implements OnInit {
   shareProduct(){
     let data={
       title:this.product.titulo,
-      text:"Tienda Algo",
+      text:environment.projectTitle,/* Shop name */
       url:window.location.href
     }
     navigator.share(data)

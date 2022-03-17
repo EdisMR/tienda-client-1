@@ -9,7 +9,7 @@
 <!-- CARDS -->
     <article class="card-product">
       <div class="card-image" (click)="navigateToProduct(producto.idaleatorio)">
-        <img [src]="getImage(producto.imagenes)" alt="imagen de producto" loading="lazy" draggable="false">
+        <img [src]="_productsSvc.getProductImageURL(producto.imagenes)" alt="imagen de producto" loading="lazy" draggable="false">
       </div>
 
       <div class="card-title">

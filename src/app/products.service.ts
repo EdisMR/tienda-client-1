@@ -29,5 +29,10 @@ export class ProductsService {
       })
   }
 
+  getProductImageURL(data:string){
+    let tempArray=data.split(",");
+    return `${environment.mainURL}images/${tempArray[0]}`
+  }
+
   constructor(private http: HttpClient) {}
 }

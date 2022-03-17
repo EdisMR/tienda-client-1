@@ -4,55 +4,58 @@
 
 <section *ngIf="cart.products.length!=0">
 
-<table>
-<tbody>
+  <section class="tableCenter">
 
-  <tr *ngFor="let item of cart.products">
 
-    <td class="imageContainer">
-      <img [src]="getImageURL(item.id)" alt="Image" (click)="gotoProduct(item.id)">
-    </td>
+    <table>
+        <ng-container *ngFor="let item of cart.products">
+          <tr>
 
-      <td class="itemName">
-        <span>
-          {{getItemName(item.id)}}
-        </span>
-      </td>
+            <td class="imageContainer">
+              <img [src]="getImageURL(item.id)" alt="Image" (click)="gotoProduct(item.id)">
+            </td>
 
-      <td class="itemValue">
-        <span>
-          &#162;{{item.valor}}
-        </span>
-      </td>
+            <td class="itemName">
+              <span>
+                {{getItemName(item.id)}}
+              </span>
+            </td>
 
-      <td class="itemHowMany">
-        <select [value]="item.cantidad" (input)="setItem(item.id,selectNumber.value)" #selectNumber>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </td>
+            <td class="itemValue">
+              <span>
+                &#162;{{item.valor}}
+              </span>
+            </td>
 
-      <td class="deleteItem">
-        <div id="btnDeleteProduct" (click)="deleteProduct(item.id)">
-          <span>
-            &#x2715;
-          </span>
-        </div>
-      </td>
+            <td class="itemHowMany">
+              <select [value]="item.cantidad" (input)="setItem(item.id,selectNumber.value)" #selectNumber>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </td>
 
-    </tr>
+            <td class="deleteItem">
+              <div id="btnDeleteProduct" (click)="deleteProduct(item.id)">
+                <span>
+                  &#x2715;
+                </span>
+              </div>
+            </td>
 
-</tbody>
-</table>
+          </tr>
+        </ng-container>
 
-<section class="total">
-  <span>
-    Total:
-  </span>
-  <span>&#162;{{getTotal()}}</span>
-</section>
+    </table>
+  </section>
+
+  <section class="total">
+    <span>
+      Total:
+    </span>
+    <span>&#162;{{getTotal()}}</span>
+  </section>
 
 </section>

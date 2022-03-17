@@ -59,6 +59,20 @@ export class ProductInfoComponent implements OnInit {
     })
   }
 
+  shareProduct(){
+    let data={
+      title:this.product.titulo,
+      text:"Tienda Algo",
+      url:window.location.href
+    }
+    navigator.share(data)
+    .then(e=>{
+      console.log(e
+        );
+
+    })
+  }
+
   constructor(
     private _activated: ActivatedRoute,
     private _products: ProductsService,

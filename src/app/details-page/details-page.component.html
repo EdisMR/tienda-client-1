@@ -1,22 +1,31 @@
+<section id="noCart" *ngIf="cart.products.length==0">
+  <img src="assets/bg1.webp" alt="background">
+</section>
+
+<section *ngIf="cart.products.length!=0">
 
 <table>
 <tbody>
 
   <tr *ngFor="let item of cart.products">
 
-    <td>
+    <td class="imageContainer">
       <img [src]="getImageURL(item.id)" alt="Image" (click)="gotoProduct(item.id)">
     </td>
 
-      <td>
-        {{getItemName(item.id)}}
+      <td class="itemName">
+        <span>
+          {{getItemName(item.id)}}
+        </span>
       </td>
 
-      <td>
-        &#162;{{item.valor}}
+      <td class="itemValue">
+        <span>
+          &#162;{{item.valor}}
+        </span>
       </td>
 
-      <td>
+      <td class="itemHowMany">
         <select [value]="item.cantidad" (input)="setItem(item.id,selectNumber.value)" #selectNumber>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -26,8 +35,12 @@
         </select>
       </td>
 
-      <td>
-        <span (click)="deleteProduct(item.id)">D</span>
+      <td class="deleteItem">
+        <div id="btnDeleteProduct" (click)="deleteProduct(item.id)">
+          <span>
+            &#x2715;
+          </span>
+        </div>
       </td>
 
     </tr>
@@ -40,4 +53,6 @@
     Total:
   </span>
   <span>&#162;{{getTotal()}}</span>
+</section>
+
 </section>

@@ -15,7 +15,10 @@
   text-align: center;
 }
 
-.itemHowMany {}
+.itemHowMany {
+padding-left: 10px;
+padding-right: 10px;
+}
 
 .deleteItem {}
 
@@ -44,7 +47,9 @@
 }
 
 
-.total {}
+.total {
+  text-align: center;
+}
 
 
 #noCart {
@@ -66,8 +71,9 @@
 }
 
 table{
+  border: 1px solid rgba(0, 0, 0, 0.103);
   td{
-
+    border: 1px solid rgba(0, 0, 0, 0.219);
   }
 }
 

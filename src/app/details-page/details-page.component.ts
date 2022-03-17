@@ -47,6 +47,14 @@ export class DetailsPageComponent implements OnInit {
     this._router.navigate(['/id',id])
   }
 
+  getTotal():number{
+    let result:number=0
+    this.cart.products.forEach(elm=>{
+      result+=(parseFloat(elm.valor))*elm.cantidad
+    })
+    return result
+  }
+
   constructor(
     public _products:ProductsService,
     public cart:CartService,

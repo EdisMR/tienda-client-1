@@ -72,7 +72,8 @@ padding-right: 10px;
 
 table{
   border: 1px solid rgba(0, 0, 0, 0.103);
-  td{
+  tr{
+    display: block;
     border: 1px solid rgba(0, 0, 0, 0.219);
   }
 }

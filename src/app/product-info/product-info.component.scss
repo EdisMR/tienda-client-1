@@ -83,9 +83,30 @@
   }
 }
 
-
-
-
+#slider-container{
+  position: relative;
+  &::after{
+    content: "❰";
+    display: inline-block;
+    font-size: 50px;
+    color: rgb(3 164 222 / 15%);
+    position: absolute;
+    top: 40%;
+    left: calc(0% - 23px);
+    z-index: 10;
+  }
+  &::before{
+    content: "❱";
+    display: inline-block;
+    font-weight: 100;
+    font-size: 50px;
+    color: rgb(3 164 222 / 15%);
+    position: absolute;
+    top: 40%;
+    left: calc(100% - 1px);
+    z-index: 10;
+  }
+}
 
 
 

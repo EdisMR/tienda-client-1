@@ -1,0 +1,11 @@
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primaryBG);
+  color: white;
+  height: 50px;
+  a{
+    color: white !important;
+  }
+}

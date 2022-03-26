@@ -13,6 +13,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { SliderComponent } from './slider/slider.component';
 import { CartService } from './cart.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CartService } from './cart.service';
     ProductInfoComponent,
     AboutusComponent,
     ErrorpageComponent,
-    SliderComponent
+    SliderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

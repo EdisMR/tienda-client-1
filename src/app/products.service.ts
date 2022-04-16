@@ -8,8 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductsService {
 
-  private getProductsURL:string = `${environment.mainURL}common-scripts/info-n-products.php`;
-  oneProductURL:string=`${environment.mainURL}common-scripts/info-one-product.php`
+  private getProductsURL:string = `${environment.mainURL}/apiv2/product/`;
 
   allProducts:ProductsResponse[]=[]
   productsSubsciption!:Subscription
@@ -19,7 +18,11 @@ export class ProductsService {
   }
 
   getOneProduct(id:string):Observable<any>{
-    return this.http.get<any>(`${this.oneProductURL}/?productid=${id}`)
+    return this.http.get<any>(`${this.getProductsURL}`,{
+      params:{
+        id:id,
+      }
+    })
   }
 
   initialRequest(){
@@ -31,7 +34,7 @@ export class ProductsService {
 
   getProductImageURL(data:string){
     let tempArray=data.split(",");
-    return `${environment.mainURL}images/${tempArray[0]}`
+    return `${environment.mainURL}/images/${tempArray[0]}`
   }
 
   constructor(private http: HttpClient) {}

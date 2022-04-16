@@ -17,7 +17,6 @@ export class CartService {
   randomProductID():string {
     let tempData:any = new Date()
     tempData=(tempData.valueOf()).toString(36)
-    console.log(tempData);
     return tempData
   }
 

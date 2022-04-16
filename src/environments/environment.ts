@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mainURL:"http://tienda.localhost/",
+  mainURL:"http://tiendaapi.localhost",
   projectTitle:"Titulo de la tienda"
 };
 

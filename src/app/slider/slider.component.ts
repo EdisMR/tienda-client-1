@@ -16,7 +16,7 @@ export class SliderComponent implements OnInit, OnDestroy{
   }
 
   getImageURL(imageR: string) {
-    return `${environment.mainURL}images/${imageR}`;
+    return `${environment.mainURL}/images/${imageR}`;
   }
 
     /* ************************* */

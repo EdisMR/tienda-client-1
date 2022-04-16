@@ -77,7 +77,7 @@ function productDetailsTableInner(data){
     cantidad=document.createElement("td")
     valor=document.createElement("td")
     imagen=document.createElement("td")
-    id.innerHTML=`<a href="${location.origin}/admin/producto/?productid=${data[x].id}">${data[x].id}</a>`
+    id.innerHTML=`<a target="_blank" rel="noopener noreferrer" href="${location.origin}/admin/producto/?productid=${data[x].id}">${data[x].id}</a>`
     cantidad.innerHTML=data[x].cantidad
     valor.innerHTML=data[x].valor
     imagen.innerHTML="Null"

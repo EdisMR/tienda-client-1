@@ -26,7 +26,7 @@ sessionVerifier();
 
     <div>
       <div>Fecha de compra: <span id="dateInner"></span></div>
-      <a id="contactar" target="_blank" rel="noopener noreferrer">Contactar por Whatsapp</a>
+      <a id="contactar" target="_blank" rel="noopener noreferrer">Contactar al cliente por Whatsapp</a>
     </div>
 
     <div class="formContainer">
@@ -72,7 +72,7 @@ sessionVerifier();
 
     <div id="productDetails">
 
-      <table>
+    <table>
         <thead>
           <tr>
             <td>Photo</td>
